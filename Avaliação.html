@@ -8,32 +8,49 @@
 </head>
 <body>
 
-<section id="Avaliação">
-    <h1>Avalie a Nossa Pizzaria</h1>
-    <form action="avaliar" method="post">
-        <label for="nome">Seu nome:</label>
-        <input type="text" id="nome" name="nome" required>
+    <header class="header">
+        <a href="#"><h1>DevPizza</h1></a>
+        <div>
+        <nav>
+            <ul></ul>
+            <ul><a href="index.html">Inicio</a></ul>
+            <ul><a href="???">O Ambiente</a></ul>
+            <ul><a href="sobre nos.html">Sobre Nós</a></ul>
+            <ul><a href="cardapio.html">Cardapio</a></ul>
+            <ul><a href="avaliação.html">Avaliações</a></ul>
+            <ul><a href="contato.html">Contato</a></ul>
+            <ul><a href="login.html">Loggin</a></ul>   
+        </nav>
+        </div>
+      </header>
 
-        <label>Sua avaliação:</label>
-        <section class="estrelas">
-            <input type="radio" id="estrela5" name="avaliacao" value="5" required> Estrela 5
-            <label for="estrela5"></label>
-            <input type="radio" id="estrela4" name="avaliacao" value="4"> Estrela 4
-            <label for="estrela4"></label>
-            <input type="radio" id="estrela3" name="avaliacao" value="3"> Estrela 3
-            <label for="estrela3"></label>
-            <input type="radio" id="estrela2" name="avaliacao" value="2"> Estrela 2
-            <label for="estrela2"></label>
-            <input type="radio" id="estrela1" name="avaliacao" value="1"> Estrela 1
-            <label for="estrela1"></label>
-        </section>
 
-        <label for="comentario">Comentário:</label>
-        <textarea id="comentario" name="comentario" rows="5" placeholder="Conte-nos o que achou da sua experiência!"></textarea>
+    <section id="Avaliação">
+        <h1>Avalie a Nossa Pizzaria</h1>
+        <form action="avaliar" method="post">
+            <label for="nome">Seu nome:</label>
+            <input type="text" id="nome" name="nome" required>
 
-        <button type="submit">Enviar Avaliação</button>
-    </form>
-</section>
+            <label>Sua avaliação:</label>
+            <section class="estrelas">
+                <input type="radio" id="estrela5" name="avaliacao" value="5" required> Estrela 5
+                <label for="estrela5"></label>
+                <input type="radio" id="estrela4" name="avaliacao" value="4"> Estrela 4
+                <label for="estrela4"></label>
+                <input type="radio" id="estrela3" name="avaliacao" value="3"> Estrela 3
+                <label for="estrela3"></label>
+                <input type="radio" id="estrela2" name="avaliacao" value="2"> Estrela 2
+                <label for="estrela2"></label>
+                <input type="radio" id="estrela1" name="avaliacao" value="1"> Estrela 1
+                <label for="estrela1"></label>
+            </section>
+
+            <label for="comentario">Comentário:</label>
+            <textarea id="comentario" name="comentario" rows="5" placeholder="Conte-nos o que achou da sua experiência!"></textarea>
+
+            <button type="submit">Enviar Avaliação</button>
+        </form>
+    </section>
 
 </body>
 </html>
