@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cesta de Compras - Pizzaria</title>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="">Inicio</a>
+      <a href="">O ambiente</a>
+      <a href="">Sobre nós</a>
+      <a href="/cardapio.html">Cardápio</a>
+      <a href="">Avaliações</a>
+      <a href="">Contato</a>
+      <a href="">Loggin</a>
+      <a href="">Cadastro</a>
+      <a href="/cesta de compras.html">Cesta de compras</a>
+    </nav>
+  </header>
+
+  <main>
+    
+    <h1>Cesta de Compras:</h1>
+    <p>Revise seu pedido antes de finalizar a compra.</p>
+    <br><br>
+    <!-- Lista de itens do carrinho -->
+    <section id="itens-carrinho">
+      <h2>Itens Selecionados</h2>
+      <ul>
+        <li>
+          <article>
+            <h3>Pizza Portuguesa</h3>
+            <p><strong>Tamanho:</strong> Grande</p>
+            <p><strong>Preço:</strong> R$ 40,00</p>
+            
+            <!-- opção de meio sabor -->
+            <label for="meio-portuguesa">Meio a Meio:</label>
+            <select id="meio-portuguesa" name="meio-portuguesa">
+              <option value="">Nenhum</option>
+              <option value="calabresa">Calabresa</option>
+              <option value="marguerita">Marguerita</option>
+              <option value="frango-catupiry">Frango com Catupiry</option>
+            </select><br><br>
+
+            <label for="qtd-portuguesa">Quantidade:</label>
+            <input type="number" id="qtd-portuguesa" name="qtd-portuguesa" min="1" value="1">
+          </article>
+        </li>
+
+        <li>
+          <article>
+            <h3>Pizza Calabresa</h3>
+            <p><strong>Tamanho:</strong> Média</p>
+            <p><strong>Preço:</strong> R$ 32,00</p>
+            
+            <!-- opção de meio sabor -->
+            <label for="meio-calabresa">Meio a Meio:</label>
+            <select id="meio-calabresa" name="meio-calabresa">
+              <option value="">Nenhum</option>
+              <option value="portuguesa">Portuguesa</option>
+              <option value="marguerita">Marguerita</option>
+              <option value="frango-catupiry">Frango com Catupiry</option>
+            </select><br><br>
+
+            <label for="qtd-calabresa">Quantidade:</label>
+            <input type="number" id="qtd-calabresa" name="qtd-calabresa" min="1" value="2">
+          </article>
+        </li>
+
+        <li>
+          <article>
+            <h3>Refrigerante 2L</h3>
+            <p><strong>Preço:</strong> R$ 12,00</p>
+            <label for="qtd-refri">Quantidade:</label>
+            <input type="number" id="qtd-refri" name="qtd-refri" min="1" value="1">
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Resumo do pedido -->
+    <aside id="resumo">
+      <h2>Resumo do Pedido</h2>
+      <p><strong>Subtotal:</strong> R$ 116,00</p>
+      <p><strong>Taxa de entrega:</strong> R$ 8,00</p>
+      <p><strong>Total:</strong> R$ 124,00</p>
+    </aside>
+
+    <!-- Formulário de entrega -->
+    <section id="dados-cliente">
+      <h2>Dados para Entrega</h2>
+      <form>
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="endereco">Endereço:</label><br>
+        <input type="text" id="endereco" name="endereco" required><br><br>
+
+        <label for="pagamento">Forma de Pagamento:</label><br>
+        <select id="pagamento" name="pagamento">
+          <option value="dinheiro">Dinheiro</option>
+          <option value="cartao">Cartão</option>
+          <option value="pix">PIX</option>
+        </select><br><br>
+
+        <button type="submit">Finalizar Pedido</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pizzaria Sabor da Casa. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
