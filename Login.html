@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login do Cliente</title>
+    
+</head>
+
+<body>
+    <header>
+        <h1>Pizzaria Saborosa</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="pedidos.html">Meus Pedidos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Acesse sua conta</h2>
+            <p>Por favor, faça login para gerenciar seus pedidos e aproveitar as melhores ofertas.</p>
+
+            <form action="/processa_login.php" method="post">
+                <p>
+                    <label for="email_usuario">E-mail:</label>
+                    <input type="email" id="email_usuario" name="email" placeholder="seuemail@exemplo.com.br" required>
+                </p>
+                <p>
+                    <label for="senha_usuario">Senha:</label>
+                    <input type="password" id="senha_usuario" name="senha" placeholder="Sua senha" required>
+                </p>
+                <p>
+                    <button type="submit">Entrar</button>
+                </p>
+                <p>
+                    <a href="cadastro.html">Não tem uma conta? Cadastre-se aqui.</a>
+                </p>
+                <p>
+                    <a href="esqueci_senha.html">Esqueceu sua senha?</a>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        
+        <address>
+            <p>Entre em contato: <a href="mailto:contato@pizzariasaborosa.com.br">contato@pizzariasaborosa.com.br</a></p>
+            <p>Telefone: (XX) XXXX-XXXX</p>
+            <p>Endereço: Rua Principal, 123 - Bairro Centro, Cidade - Estado</p>
+            <p>&copy; 2025 Pizzaria. Todos os direitos reservados.</p>
+        </address>
+    </footer>
+</body>
+
+</html>
