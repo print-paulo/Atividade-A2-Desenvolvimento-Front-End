@@ -47,35 +47,34 @@
                     </article>
                 </li>
                 <li>
-                <article>
-                    <h3>Pizza Calabresa</h3>
-                    <p><strong>Tamanho:</strong> Média</p>
-                    <p><strong>Preço:</strong> R$ 32,00</p>
-                
-                <!-- opção de meio sabor -->
-                    <label for="meio-calabresa">Meio a Meio:</label>
-                    <select id="meio-calabresa" name="meio-calabresa">
-                        <option value="">Nenhum</option>
-                        <option value="portuguesa">Portuguesa</option>
-                        <option value="marguerita">Marguerita</option>
-                        <option value="frango-catupiry">Frango com Catupiry</option>
-                    </select><br><br>
+                    <article>
+                        <h3>Pizza Calabresa</h3>
+                        <p><strong>Tamanho:</strong> Média</p>
+                        <p><strong>Preço:</strong> R$ 32,00</p>
+                    
+                    <!-- opção de meio sabor -->
+                        <label for="meio-calabresa">Meio a Meio:</label>
+                        <select id="meio-calabresa" name="meio-calabresa">
+                            <option value="">Nenhum</option>
+                            <option value="portuguesa">Portuguesa</option>
+                            <option value="marguerita">Marguerita</option>
+                            <option value="frango-catupiry">Frango com Catupiry</option>
+                        </select><br><br>
 
-                    <label for="qtd-calabresa">Quantidade:</label>
-                    <input type="number" id="qtd-calabresa" name="qtd-calabresa" min="1" value="2">
-                </article>
+                        <label for="qtd-calabresa">Quantidade:</label>
+                        <input type="number" id="qtd-calabresa" name="qtd-calabresa" min="1" value="2">
+                    </article>
                 </li>
                 <li>
-                <article>
-                    <h3>Refrigerante 2L</h3>
-                    <p><strong>Preço:</strong> R$ 12,00</p>
-                    <label for="qtd-refri">Quantidade:</label>
-                    <input type="number" id="qtd-refri" name="qtd-refri" min="1" value="1">
-                </article>
+                    <article>
+                        <h3>Refrigerante 2L</h3>
+                        <p><strong>Preço:</strong> R$ 12,00</p>
+                        <label for="qtd-refri">Quantidade:</label>
+                        <input type="number" id="qtd-refri" name="qtd-refri" min="1" value="1">
+                    </article>
                 </li>
             </ul>
         </section>
-
         <!-- Resumo do pedido -->
         <aside id="resumo">
             <h2>Resumo do Pedido</h2>
@@ -83,11 +82,10 @@
             <p><strong>Taxa de entrega:</strong> R$ 8,00</p>
             <p><strong>Total:</strong> R$ 124,00</p>
         </aside>
-
         <!-- Formulário de entrega -->
         <section id="dados-cliente">
             <h2>Dados para Entrega</h2>
-            <form>
+            <form action = "dadosEntrega">
                 <label for="nome">Nome:</label><br>
                 <input type="text" id="nome" name="nome" required><br><br>
 
@@ -104,9 +102,7 @@
                 <button type="submit">Finalizar Pedido</button>
             </form>
         </section>
-
     </main>
-
     <footer>
         <div>
             <h3>Pizzaria Bella Massa</h3>
