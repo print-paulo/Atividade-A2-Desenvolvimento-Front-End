@@ -17,81 +17,93 @@
 </head>
 <body>
 
-  <header class="header">
-    <a href="#"><h1>DevPizza</h1></a>
-    <div>
-    <nav>
-        <ul></ul>
-        <ul><a href="index.html">Inicio</a></ul>
-        <ul><a href="ambiente.html">O Ambiente</a></ul>
-        <ul><a href="sobre nos.html">Sobre Nós</a></ul>
-        <ul><a href="cardapio.html">Cardapio</a></ul>
-        <ul><a href="avaliação.html">Avaliações</a></ul>
-        <ul><a href="contato.html">Contato</a></ul>
-        <ul><a href="login.html">Loggin</a></ul>   
-    </nav>
-    </div>
-  </header>
+    <header class="header">
+        <a href="#"><h1>DevPizza</h1></a>
+        <div>
+            <nav>
+                <ul></ul>
+                <ul><a href="../index.html">Inicio</a></ul>
+                <ul><a href="ambiente.html">O Ambiente</a></ul>
+                <ul><a href="sobre nos.html">Sobre Nós</a></ul>
+                <ul><a href="cardapio.html">Cardapio</a></ul>
+                <ul><a href="avaliação.html">Avaliações</a></ul>
+                <ul><a href="contato.html">Contato</a></ul>
+                <ul><a href="login.html">Login</a></ul>   
+            </nav>
+        </div>
+    </header>
 
-  <main>
-    <section>
-      <h2>Nossa Localização</h2>
-      <p>Visite-nos ou entre em contato pelos canais abaixo:</p>
+    <main>
+        <section>
+            <h2>Nossa Localização</h2>
+            <p>Visite-nos ou entre em contato pelos canais abaixo:</p>
 
-      <!-- Mapa -->
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18..." 
-        width="400" 
-        height="300" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy">
-      </iframe>
+            <!-- Mapa -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18..." 
+                width="400" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
 
-      <!-- Informações de contato -->
-      <ul>
-        <li><strong>Telefone:</strong> (11) 99999-9999</li>
-        <li><strong>Email:</strong> contato@bellamassa.com</li>
-        <li><strong>Endereço:</strong> Rua das Pizzas, 123 - São Paulo, SP</li>
-        <li><strong>Instagram:</strong> @pizzariabellamassa</li>
+            <!-- Informações de contato -->
+            <ul>
+                <li><strong>Telefone:</strong> (11) 99999-9999</li>
+                <li><strong>Email:</strong> contato@bellamassa.com</li>
+                <li><strong>Endereço:</strong> Rua das Pizzas, 123 - São Paulo, SP</li>
+                <li><strong>Instagram:</strong> @pizzariabellamassa</li>
+            </ul>
+        </section>
 
-      </ul>
-    </section>
+        <section>
+            <h2>Formulário de Contato</h2>
+            <form action="#" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
 
-    <section>
-      <h2>Formulário de Contato</h2>
-      <form action="#" method="post">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone">
 
-        <label for="telefone">Telefone:</label>
-        <input type="tel" id="telefone" name="telefone">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
+                <label for="assunto">Assunto:</label>
+                <input type="text" id="assunto" name="assunto">
 
-        <label for="assunto">Assunto:</label>
-        <input type="text" id="assunto" name="assunto">
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                <label>
+                <input type="checkbox" required> Confirmo que sou humano
+                </label>
 
-        <label>
-          <input type="checkbox" required> Confirmo que sou humano
-        </label>
+                <button type="submit">Enviar Contato</button>
+            </form>
+        </section>
+    </main>
 
-        <button type="submit">Enviar Contato</button>
-      </form>
-    </section>
-  </main>
+    <footer>
+        <div>
+            <h3>Pizzaria Bella Massa</h3>
+            <p>🍕 A melhor pizza da cidade desde 1995</p>
+        </div>
 
-  <footer>
-    <p>&copy; 2025 Pizzaria Bella Massa - Todos os direitos reservados.</p>
-  </footer>
+        <address>
+            <h4>Endereço</h4>
+            <p>Rua das Pizzas, 123 - São Paulo, SP</p>
+        </address>
 
-</body>
-</html>
+        <div>
+            <h4>Redes Sociais</h4>
+            <a href="#">Facebook</a> | 
+            <a href="#">Instagram</a> | 
+            <a href="#">WhatsApp</a>
+        </div>
 
+        <p>&copy; 2025 Pizzaria Bella Massa - Todos os direitos reservados.</p>
+    </footer>
 </body>
 
 </html>

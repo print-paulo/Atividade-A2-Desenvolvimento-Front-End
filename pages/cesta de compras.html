@@ -6,117 +6,131 @@
     <title>Cesta de Compras - Pizzaria</title>
 </head>
 <body>
+    <header class="header">
+        <a href="#"><h1>DevPizza</h1></a>
+        <div>
+            <nav>
+                <ul></ul>
+                <ul><a href="../index.html">Inicio</a></ul>
+                <ul><a href="ambiente.html">O Ambiente</a></ul>
+                <ul><a href="sobre nos.html">Sobre Nós</a></ul>
+                <ul><a href="cardapio.html">Cardapio</a></ul>
+                <ul><a href="avaliação.html">Avaliações</a></ul>
+                <ul><a href="contato.html">Contato</a></ul>
+                <ul><a href="login.html">Login</a></ul>   
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>Cesta de Compras:</h1>
+        <p>Revise seu pedido antes de finalizar a compra.</p><br><br>
+        <!-- Lista de itens do carrinho -->
+        <section id="itens-carrinho">
+            <h2>Itens Selecionados</h2>
+            <ul>
+                <li>
+                    <article>
+                        <h3>Pizza Portuguesa</h3>
+                        <p><strong>Tamanho:</strong> Grande</p>
+                        <p><strong>Preço:</strong> R$ 40,00</p>
+                    
+                        <!-- opção de meio sabor -->
+                        <label for="meio-portuguesa">Meio a Meio:</label>
+                        <select id="meio-portuguesa" name="meio-portuguesa">
+                            <option value="">Nenhum</option>
+                            <option value="calabresa">Calabresa</option>
+                            <option value="marguerita">Marguerita</option>
+                            <option value="frango-catupiry">Frango com Catupiry</option>
+                        </select><br><br>
+                        <label for="qtd-portuguesa">Quantidade:</label>
+                        <input type="number" id="qtd-portuguesa" name="qtd-portuguesa" min="1" value="1">
+                    </article>
+                </li>
+                <li>
+                <article>
+                    <h3>Pizza Calabresa</h3>
+                    <p><strong>Tamanho:</strong> Média</p>
+                    <p><strong>Preço:</strong> R$ 32,00</p>
+                
+                <!-- opção de meio sabor -->
+                    <label for="meio-calabresa">Meio a Meio:</label>
+                    <select id="meio-calabresa" name="meio-calabresa">
+                        <option value="">Nenhum</option>
+                        <option value="portuguesa">Portuguesa</option>
+                        <option value="marguerita">Marguerita</option>
+                        <option value="frango-catupiry">Frango com Catupiry</option>
+                    </select><br><br>
 
-  <header class="header">
-    <a href="#"><h1>DevPizza</h1></a>
-    <div>
-    <nav>
-        <ul></ul>
-        <ul><a href="index.html">Inicio</a></ul>
-        <ul><a href="ambiente.html">O Ambiente</a></ul>
-        <ul><a href="sobre nos.html">Sobre Nós</a></ul>
-        <ul><a href="cardapio.html">Cardapio</a></ul>
-        <ul><a href="avaliação.html">Avaliações</a></ul>
-        <ul><a href="contato.html">Contato</a></ul>
-        <ul><a href="login.html">Loggin</a></ul>   
-    </nav>
-    </div>
-  </header>
+                    <label for="qtd-calabresa">Quantidade:</label>
+                    <input type="number" id="qtd-calabresa" name="qtd-calabresa" min="1" value="2">
+                </article>
+                </li>
+                <li>
+                <article>
+                    <h3>Refrigerante 2L</h3>
+                    <p><strong>Preço:</strong> R$ 12,00</p>
+                    <label for="qtd-refri">Quantidade:</label>
+                    <input type="number" id="qtd-refri" name="qtd-refri" min="1" value="1">
+                </article>
+                </li>
+            </ul>
+        </section>
 
-  <main>
-    
-    <h1>Cesta de Compras:</h1>
-    <p>Revise seu pedido antes de finalizar a compra.</p>
-    <br><br>
-    <!-- Lista de itens do carrinho -->
-    <section id="itens-carrinho">
-      <h2>Itens Selecionados</h2>
-      <ul>
-        <li>
-          <article>
-            <h3>Pizza Portuguesa</h3>
-            <p><strong>Tamanho:</strong> Grande</p>
-            <p><strong>Preço:</strong> R$ 40,00</p>
-            
-            <!-- opção de meio sabor -->
-            <label for="meio-portuguesa">Meio a Meio:</label>
-            <select id="meio-portuguesa" name="meio-portuguesa">
-              <option value="">Nenhum</option>
-              <option value="calabresa">Calabresa</option>
-              <option value="marguerita">Marguerita</option>
-              <option value="frango-catupiry">Frango com Catupiry</option>
-            </select><br><br>
+        <!-- Resumo do pedido -->
+        <aside id="resumo">
+            <h2>Resumo do Pedido</h2>
+            <p><strong>Subtotal:</strong> R$ 116,00</p>
+            <p><strong>Taxa de entrega:</strong> R$ 8,00</p>
+            <p><strong>Total:</strong> R$ 124,00</p>
+        </aside>
 
-            <label for="qtd-portuguesa">Quantidade:</label>
-            <input type="number" id="qtd-portuguesa" name="qtd-portuguesa" min="1" value="1">
-          </article>
-        </li>
+        <!-- Formulário de entrega -->
+        <section id="dados-cliente">
+            <h2>Dados para Entrega</h2>
+            <form>
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" required><br><br>
 
-        <li>
-          <article>
-            <h3>Pizza Calabresa</h3>
-            <p><strong>Tamanho:</strong> Média</p>
-            <p><strong>Preço:</strong> R$ 32,00</p>
-            
-            <!-- opção de meio sabor -->
-            <label for="meio-calabresa">Meio a Meio:</label>
-            <select id="meio-calabresa" name="meio-calabresa">
-              <option value="">Nenhum</option>
-              <option value="portuguesa">Portuguesa</option>
-              <option value="marguerita">Marguerita</option>
-              <option value="frango-catupiry">Frango com Catupiry</option>
-            </select><br><br>
+                <label for="endereco">Endereço:</label><br>
+                <input type="text" id="endereco" name="endereco" required><br><br>
 
-            <label for="qtd-calabresa">Quantidade:</label>
-            <input type="number" id="qtd-calabresa" name="qtd-calabresa" min="1" value="2">
-          </article>
-        </li>
+                <label for="pagamento">Forma de Pagamento:</label><br>
+                <select id="pagamento" name="pagamento">
+                    <option value="dinheiro">Dinheiro</option>
+                    <option value="cartao">Cartão</option>
+                    <option value="pix">PIX</option>
+                </select><br><br>
 
-        <li>
-          <article>
-            <h3>Refrigerante 2L</h3>
-            <p><strong>Preço:</strong> R$ 12,00</p>
-            <label for="qtd-refri">Quantidade:</label>
-            <input type="number" id="qtd-refri" name="qtd-refri" min="1" value="1">
-          </article>
-        </li>
-      </ul>
-    </section>
+                <button type="submit">Finalizar Pedido</button>
+            </form>
+        </section>
 
-    <!-- Resumo do pedido -->
-    <aside id="resumo">
-      <h2>Resumo do Pedido</h2>
-      <p><strong>Subtotal:</strong> R$ 116,00</p>
-      <p><strong>Taxa de entrega:</strong> R$ 8,00</p>
-      <p><strong>Total:</strong> R$ 124,00</p>
-    </aside>
+    </main>
 
-    <!-- Formulário de entrega -->
-    <section id="dados-cliente">
-      <h2>Dados para Entrega</h2>
-      <form>
-        <label for="nome">Nome:</label><br>
-        <input type="text" id="nome" name="nome" required><br><br>
+    <footer>
+        <div>
+            <h3>Pizzaria Bella Massa</h3>
+            <p>🍕 A melhor pizza da cidade desde 1995</p>
+        </div>
 
-        <label for="endereco">Endereço:</label><br>
-        <input type="text" id="endereco" name="endereco" required><br><br>
+        <div>
+            <h4>Contato</h4>
+            <a href="contato.html">Entre em Contato</a>
+        </div>
 
-        <label for="pagamento">Forma de Pagamento:</label><br>
-        <select id="pagamento" name="pagamento">
-          <option value="dinheiro">Dinheiro</option>
-          <option value="cartao">Cartão</option>
-          <option value="pix">PIX</option>
-        </select><br><br>
+        <address>
+            <h4>Endereço</h4>
+            <p>Rua das Pizzas, 123 - São Paulo, SP</p>
+        </address>
 
-        <button type="submit">Finalizar Pedido</button>
-      </form>
-    </section>
+        <div>
+            <h4>Redes Sociais</h4>
+            <a href="#">Facebook</a> | 
+            <a href="#">Instagram</a> | 
+            <a href="#">WhatsApp</a>
+        </div>
 
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Pizzaria Sabor da Casa. Todos os direitos reservados.</p>
-  </footer>
-
+        <p>&copy; 2025 Pizzaria Bella Massa - Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
