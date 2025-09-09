@@ -14,22 +14,22 @@
         <nav>
             <ul></ul>
             <ul><a href="index.html">Inicio</a></ul>
-            <ul><a href="???">O Ambiente</a></ul>
+            <ul><a href="ambiente.html">O Ambiente</a></ul>
             <ul><a href="sobre nos.html">Sobre Nós</a></ul>
             <ul><a href="cardapio.html">Cardapio</a></ul>
             <ul><a href="avaliação.html">Avaliações</a></ul>
             <ul><a href="contato.html">Contato</a></ul>
-            <ul><a href="login.html">Loggin</a></ul>   
+            <ul><a href="login.html">Login</a></ul>   
         </nav>
         </div>
       </header>
 
     <main>
-        <section>
+        <section id = "login">
             <h2>Acesse sua conta</h2>
             <p>Por favor, faça login para gerenciar seus pedidos e aproveitar as melhores ofertas.</p>
 
-            <form action="/processa_login.php" method="post">
+            <form action="logar" method="post">
                 <p>
                     <label for="email_usuario">E-mail:</label>
                     <input type="email" id="email_usuario" name="email" placeholder="seuemail@exemplo.com.br" required>
@@ -52,14 +52,30 @@
     </main>
 
     <footer>
-        
-        <address>
-            <p>Entre em contato: <a href="mailto:contato@pizzariasaborosa.com.br">contato@pizzariasaborosa.com.br</a></p>
-            <p>Telefone: (XX) XXXX-XXXX</p>
-            <p>Endereço: Rua Principal, 123 - Bairro Centro, Cidade - Estado</p>
-            <p>&copy; 2025 Pizzaria. Todos os direitos reservados.</p>
-        </address>
-    </footer>
+        <div>
+            <h3>Pizzaria Bella Massa</h3>
+            <p>🍕 A melhor pizza da cidade desde 1995</p>
+        </div>
+    
+        <div>
+            <h4>Contato</h4>
+            <a href="contato.html">Entre em Contato</a>
+        </div>
+    
+        <div>
+            <h4>Endereço</h4>
+            <p>Rua das Pizzas, 123 - São Paulo, SP</p>
+        </div>
+    
+        <div>
+            <h4>Redes Sociais</h4>
+            <a href="#">Facebook</a> | 
+            <a href="#">Instagram</a> | 
+            <a href="#">WhatsApp</a>
+        </div>
+    
+        <p>&copy; 2025 Pizzaria Bella Massa - Todos os direitos reservados.</p>
+        </footer>
 </body>
 
 </html>
