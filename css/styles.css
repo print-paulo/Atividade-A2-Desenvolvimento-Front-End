@@ -1,6 +1,61 @@
+/*===============================*/
+/*======= Estilos globais =======*/
+/*===============================*/
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   margin: 0;
   padding: 0;
-  padding-top: 80px;
+  padding-top: 80px; /*Espaço para o header fixo em cima da tela (para não ficar na frente da página)*/
+}
+
+/*==================================*/
+/*======= Pagina de Cadastro =======*/
+/*==================================*/
+.form-container {
+  display: flex; /* Centraliza o formulario no meio horizontalmente*/
+  justify-content: center; /* Também centraliza o formulario no meio horizontalmente*/
+  align-items: center; /* Centraliza o formulario no meio verticalmente*/
+  height: 55vh; /* Define a altura da seção como 60% da altura da viewport*/
+}
+
+.form-card {
+  background-color: #fff; /* Cor de fundo branca para o destarcar */
+  padding: 40px;
+  border-radius: 10px; /* Arredonda as bordas*/
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+  text-align: center; /* Centraliza o texto dentro do card */;
+}
+
+.cadastro h2 {
+  font-size: 2.5em;
+  color: #BD3623;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.form-card input[type="text"],
+.form-card input[type="email"],
+.form-card input[type="password"],
+.form-card input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #a5b2ac;
+  border-radius: 5px; 
+  box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos na largura total */
+}
+
+.form-card button {
+  background-color: #BD3623;
+  color: #ffd882;
+  margin-top: 30px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.form-card button:hover {
+  background-color: #b29047;
 }
