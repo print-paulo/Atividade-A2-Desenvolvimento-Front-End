@@ -1,0 +1,44 @@
+/* Estilo para o container principal do header */
+.main-header {
+  background-color: #BD3623; /* Vermelho-tijolo da paleta */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed; /* Fixa o elemento na tela */
+  top: 0; /* Alinha o elemento com o topo */
+  left: 0; /* Alinha o elemento com a esquerda */
+  width: 100%; /* Garante que o cabeçalho ocupe toda a largura */
+  z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+/* Estilo para o link do logo (a que envolve o h1) */
+.main-header h1 {
+  color: #FFD882; /* Dourado-claro da paleta */
+  text-decoration: none;
+  margin: 0;
+}
+
+/* Estilo para a lista de links da navegação */
+.main-header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-right: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+/* Estilo para os links da navegação */
+.main-header ul a {
+  color: #FFD882; /* Dourado-claro da paleta */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+.main-header ul a:hover {
+  color: #B29047; /* Dourado-escuro da paleta, para um destaque */
+}
