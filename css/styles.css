@@ -9,6 +9,52 @@ body {
 }
 
 /*==================================*/
+/*======== Header Principal ========*/
+/*==================================*/
+.main-header {
+  background-color: #BD3623;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /*Fixar o header no topo da tela*/
+  position: fixed;
+  top: 0;
+  left: 0; 
+  width: 100%; /* Garante que o cabeçalho ocupe toda a largura */
+  z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+.main-header h1 {
+  color: #FFD882;
+  text-decoration: none;
+  margin: 0;
+}
+
+.main-header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-right: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.main-header ul a {
+  color: #FFD882;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+/* Efeito ao passar o mouse por cima de cada elemento em navegação*/
+.main-header ul a:hover {
+  color: #B29047;
+}
+
+
+/*==================================*/
 /*======= Pagina de Cadastro =======*/
 /*==================================*/
 .form-container {
