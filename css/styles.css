@@ -124,3 +124,229 @@ body {
   margin-top: -5px;
   text-align: center;
 }
+
+  /* --- Variáveis e Reset Básico --- */
+:root {
+    --cor-primaria: #BD3623; /* Vermelho */
+    --cor-secundaria: #FFD882; /* Amarelo*/
+    --cor-fundo-claro: #fff; /* Fundo principal claro */
+    --cor-texto-principal: #30471e;
+    --cor-texto-secundario: #a5b2ac;
+    --sombra-leve: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --sombra-densa: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: var(--cor-texto-principal);
+    background-color: var(--cor-fundo-claro);
+    line-height: 1.6;
+}
+
+/* --- Estilo da Página Sobre Nós --- */
+
+/* Estilo para a tag body da página sobre nós*/
+#page-sobre-nos {
+    padding-top: 100px; /* Garante que o conteúdo comece abaixo de um possível cabeçalho fixo */
+}
+
+/* --- Conteúdo Principal (MAIN) --- */
+.sn-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Seções Gerais (Nossa História, Missão, Valores, Equipe) --- */
+.sn-secao {
+    padding: 60px 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: var(--sombra-leve);
+    background-color: #ffffff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sn-secao:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-densa);
+}
+
+/* Título da Seção */
+.sn-secao__titulo {
+    text-align: center;
+    color: var(--cor-primaria);
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    border-bottom: 3px solid var(--cor-secundaria);
+    padding-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Parágrafos */
+.sn-secao__paragrafo {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: var(--cor-texto-secundario);
+    text-align: justify;
+}
+
+/* Destaques (strong) */
+.sn-destaque {
+    color: var(--cor-primaria);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* --- Seção Nossa História --- */
+.sn-historia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sn-historia p {
+    max-width: 800px;
+    margin: 0 auto 15px;
+}
+
+/* --- Figuras e Imagens --- */
+.sn-figura {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.sn-figura__imagem {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 5px solid var(--cor-secundaria);
+}
+
+/* Figura da História */
+.sn-historia__figura {
+    float: right; /* Posiciona a imagem da história */
+    margin: 15px 0 15px 30px;
+}
+.sn-historia__figura .sn-figura__imagem {
+    max-width: 300px;
+}
+
+/* Legenda da Figura */
+.sn-figura__legenda {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: var(--cor-texto-secundario);
+    font-style: italic;
+}
+
+/* --- Seção Valores --- */
+.sn-valores {
+    background-color: var(--cor-secundaria); /* Fundo com a cor secundária para destaque */
+    color: var(--cor-texto-principal);
+}
+
+.sn-valores .sn-secao__titulo {
+    color: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+}
+
+.sn-valores__lista {
+    list-style: none; /* Remove marcadores padrão */
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.sn-valores__item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--sombra-leve);
+    transition: background-color 0.3s;
+    border-left: 5px solid var(--cor-primaria);
+}
+
+.sn-valores__item:hover {
+    background-color: #fff8e1; /* Leve alteração ao passar o mouse */
+}
+
+.sn-valores__item .sn-destaque {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+/* --- Seção Equipe --- */
+.sn-equipe {
+    text-align: center;
+}
+
+/* Container para as figuras da equipe (para alinhar horizontalmente) */
+.sn-equipe__figuras-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite quebras em telas menores */
+}
+
+.sn-figura__imagem--equipe {
+    max-width: 45%; /* Cada imagem ocupa no máximo 45% do container em telas grandes */
+    height: 300px;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+}
+
+.sn-figura__imagem--equipe:hover {
+    transform: scale(1.03);
+    border-color: var(--cor-primaria);
+    box-shadow: var(--sombra-densa);
+}
+
+/* --- Media Queries (Responsividade) --- */
+
+@media (max-width: 768px) {
+    .sn-secao {
+        padding: 40px 15px;
+    }
+
+    .sn-secao__titulo {
+        font-size: 2em;
+    }
+
+    /* Ajuste para a figura da história em telas menores */
+    .sn-historia__figura {
+        float: none;
+        margin: 20px auto;
+    }
+
+    /* As imagens da equipe ficam 100% da largura em telas pequenas */
+    .sn-equipe__figuras-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sn-figura__imagem--equipe {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .sn-secao__titulo {
+        font-size: 1.7em;
+    }
+
+    .sn-secao__paragrafo {
+        font-size: 1em;
+    }
+}

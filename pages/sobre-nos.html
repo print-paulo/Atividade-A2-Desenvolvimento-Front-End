@@ -7,55 +7,62 @@
     <title>Sobre Nós - DevPizza</title>
     <link rel="stylesheet" href="../css/styles.css"  />
   </head>
-  <body>
+ <body id="page-sobre-nos"> 
+    
     <header class="main-header">
       <h1>DevPizza</h1>
       <div>
-        <nav>
-          <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="ambiente.html">O Ambiente</a></li>
-            <li><a href="sobre-nos.html">Sobre Nós</a></li>
-            <li><a href="cardapio.html">Cardapio</a></li>
-            <li><a href="avaliação.html">Avaliações</a></li>
-            <li><a href="contato.html">Contato</a></li>
-            <li><a href="login.html">Login</a></li>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="../index.html" class="main-nav__link">Inicio</a></li>
+            <li class="main-nav__item"><a href="ambiente.html" class="main-nav__link">O Ambiente</a></li>
+            <li class="main-nav__item"><a href="sobre-nos.html" class="main-nav__link main-nav__link--active">Sobre Nós</a></li>
+            <li class="main-nav__item"><a href="cardapio.html" class="main-nav__link">Cardapio</a></li>
+            <li class="main-nav__item"><a href="avaliação.html" class="main-nav__link">Avaliações</a></li>
+            <li class="main-nav__item"><a href="contato.html" class="main-nav__link">Contato</a></li>
+            <li class="main-nav__item"><a href="login.html" class="main-nav__link">Login</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <main>
-      <section id="nossaHistoria">
-        <h2>Nossa História e Paixão</h2>
-        <p>
-          Desde a nossa fundação em <strong>2005</strong>, a Pizzaria Delícias
+
+    <main class="sn-main">
+      
+      <section id="nossaHistoria" class="sn-secao sn-historia">
+        <h2 class="sn-secao__titulo">Nossa História e Paixão</h2>
+        
+        <p class="sn-secao__paragrafo">
+          Desde a nossa fundação em <strong class="sn-destaque">2005</strong>, a Pizzaria Delícias
           do Forno tem sido um pilar da comunidade, trazendo o sabor autêntico
           da Itália para a sua mesa. Começamos com uma pequena loja, movidos
           pela paixão por ingredientes frescos e uma massa de fermentação lenta,
-          secredo de família que atravessa gerações.
+          segredo de família que atravessa gerações.
         </p>
-        <p>
+        
+        <p class="sn-secao__paragrafo">
           Com o passar dos anos, o aroma de nossas pizzas recém-saídas do forno
           atraiu cada vez mais clientes. Crescemos, mas nunca perdemos a
           essência artesanal e o carinho em cada pedaço. Acreditamos que uma boa
           pizza vai além do alimento; é um momento de união, celebração e sabor.
         </p>
-        <figure>
+        
+        <figure class="sn-figura sn-historia__figura">
           <img
             src="../img/sobre nos_foto_antiga.jpg"
             alt="Fotografia antiga da primeira Pizzaria Delícias do Forno"
             width="300"
             height="300"
+            class="sn-figura__imagem"
           />
-          <figcaption>
+          <figcaption class="sn-figura__legenda">
             Nossa humilde origem em 2005, com muito sonho e sabor.
           </figcaption>
         </figure>
       </section>
 
-      <section id="nossaMissao">
-        <h2>Nossa Missão</h2>
-        <p>
+      <section id="nossaMissao" class="sn-secao sn-missao">
+        <h2 class="sn-secao__titulo">Nossa Missão</h2>
+        <p class="sn-secao__paragrafo">
           A missão da Pizzaria Delícias do Forno é oferecer a melhor experiência
           em pizza, combinando a tradição italiana com a inovação em sabores,
           utilizando sempre os mais frescos e selecionados ingredientes.
@@ -64,82 +71,88 @@
         </p>
       </section>
 
-      <section id="nossosValores">
-        <h2>Nossos Valores</h2>
-        <ul>
-          <li>
-            <strong>Qualidade Inquestionável:</strong> Selecionamos cada
+      <section id="nossosValores" class="sn-secao sn-valores">
+        <h2 class="sn-secao__titulo">Nossos Valores</h2>
+        <ul class="sn-valores__lista">
+          <li class="sn-valores__item">
+            <strong class="sn-destaque">Qualidade Inquestionável:</strong> Selecionamos cada
             ingrediente com rigor, do molho de tomate aos queijos, para garantir
             a excelência.
           </li>
-          <li>
-            <strong>Tradição e Inovação:</strong> Honramos as receitas clássicas
+          <li class="sn-valores__item">
+            <strong class="sn-destaque">Tradição e Inovação:</strong> Honramos as receitas clássicas
             enquanto exploramos novas e emocionantes combinações de sabores.
           </li>
-          <li>
-            <strong>Atendimento Cordial:</strong> Nossos clientes são a nossa
+          <li class="sn-valores__item">
+            <strong class="sn-destaque">Atendimento Cordial:</strong> Nossos clientes são a nossa
             prioridade. Buscamos sempre superar suas expectativas com um serviço
             atencioso e eficiente.
           </li>
-          <li>
-            <strong>Compromisso com a Comunidade:</strong> Valorizamos o nosso
+          <li class="sn-valores__item">
+            <strong class="sn-destaque">Compromisso com a Comunidade:</strong> Valorizamos o nosso
             bairro e apoiamos iniciativas locais, crescendo juntos.
           </li>
         </ul>
       </section>
 
-      <section id="nossaEquipe">
-        <h2>A Equipe Por Trás do Sabor</h2>
-        <p>
+      <section id="nossaEquipe" class="sn-secao sn-equipe">
+        <h2 class="sn-secao__titulo">A Equipe Por Trás do Sabor</h2>
+        <p class="sn-secao__paragrafo">
           Nossa equipe é o coração da Pizzaria Delícias do Forno. Cada pizzaiolo
           é um artista, dominando a arte de preparar a massa perfeita e assar
           cada pizza com maestria no forno a lenha. Contamos com profissionais
           dedicados que compartilham da nossa paixão pela culinária e pelo bom
           atendimento, desde a cozinha até a entrega em sua casa.
         </p>
-        <figure>
+        
+        <figure class="sn-figura sn-equipe__figuras-container">
           <img
             src="../img/foto-equipe.jpg"
             alt="Foto da equipe sorridente da Pizzaria"
             width="600"
             height="400"
+            class="sn-figura__imagem sn-figura__imagem--equipe"
           />
           <img
             src="../img/sobre nos- foto pizzaiolo.jpg"
             alt="Foto de um dos menbros da equipe da Pizzaria"
             width="600"
             height="400"
+            class="sn-figura__imagem sn-figura__imagem--equipe"
           />
-          <figcaption>
+          <figcaption class="sn-figura__legenda">
             Nossos talentosos pizzaiolos e a equipe de atendimento, prontos para
             servir você!
           </figcaption>
         </figure>
       </section>
     </main>
-    <footer>
-      <div>
-        <h3>DevPizza</h3>
-        <p>🍕 A melhor pizza da cidade desde 1995</p>
-      </div>
+    
+    <footer class="main-footer">
+      <div class="main-footer__container">
+        <div class="main-footer__bloco">
+          <h3 class="main-footer__titulo">DevPizza</h3>
+          <p class="main-footer__texto">🍕 A melhor pizza da cidade desde 1995</p>
+        </div>
 
-      <div>
-        <h4>Contato</h4>
-        <a href="contato.html">Entre em Contato</a>
-      </div>
+        <div class="main-footer__bloco">
+          <h4 class="main-footer__subtitulo">Contato</h4>
+          <a href="contato.html" class="main-footer__link">Entre em Contato</a>
+        </div>
 
-      <div>
-        <h4>Endereço</h4>
-        <p>Rua das Pizzas, 123 - São Paulo, SP</p>
-      </div>
+        <div class="main-footer__bloco">
+          <h4 class="main-footer__subtitulo">Endereço</h4>
+          <p class="main-footer__texto">Rua das Pizzas, 123 - São Paulo, SP</p>
+        </div>
 
-      <div>
-        <h4>Redes Sociais</h4>
-        <a href="#">Facebook</a> | <a href="#">Instagram</a> |
-        <a href="#">WhatsApp</a>
+        <div class="main-footer__bloco main-footer__bloco--social">
+          <h4 class="main-footer__subtitulo">Redes Sociais</h4>
+          <a href="#" class="main-footer__link">Facebook</a> | 
+          <a href="#" class="main-footer__link">Instagram</a> |
+          <a href="#" class="main-footer__link">WhatsApp</a>
+        </div>
       </div>
-
-      <p>&copy; 2025 DevPizza - Todos os direitos reservados.</p>
+      <p class="main-footer__copy">&copy; 2025 DevPizza - Todos os direitos reservados.</p>
     </footer>
   </body>
 </html>
