@@ -2,20 +2,25 @@
 /*======= Estilos globais =======*/
 /*===============================*/
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   padding: 0;
   padding-top: 110px; /*Espaço para o header fixo em cima da tela (para não ficar na frente da página)*/
+  color: var(--cor-texto-principal);
+  background-color: var(--cor-fundo-claro);
+  line-height: 1.6;
 }
-html, body {
-    height: 100%;
-    margin: 0;
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
 
 /*==================================*/
 /*======== Header Principal ========*/
 /*==================================*/
 .main-header {
-  background-color: #BD3623;
+  background-color: #bd3623;
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -24,13 +29,13 @@ html, body {
   /*Fixar o header no topo da tela*/
   position: fixed;
   top: 0;
-  left: 0; 
+  left: 0;
   width: 100%; /* Garante que o cabeçalho ocupe toda a largura */
   z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
 }
 
 .main-header h1 {
-  color: #FFD882;
+  color: #ffd882;
   text-decoration: none;
   margin: 0;
 }
@@ -45,7 +50,7 @@ html, body {
 }
 
 .main-header ul a {
-  color: #FFD882;
+  color: #ffd882;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
@@ -53,9 +58,8 @@ html, body {
 
 /* Efeito ao passar o mouse por cima de cada elemento em navegação*/
 .main-header ul a:hover {
-  color: #B29047;
+  color: #b29047;
 }
-
 
 /*==================================*/
 /*======= Pagina de Cadastro =======*/
@@ -74,12 +78,13 @@ html, body {
   padding: 40px;
   border-radius: 10px; /* Arredonda as bordas*/
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
-  text-align: center; /* Centraliza o texto dentro do card */;
+  text-align: center; /* Centraliza o texto dentro do card */
 }
 
-.cadastro h2, .login h2 {
+.cadastro h2,
+.login h2 {
   font-size: 2.5em;
-  color: #BD3623;
+  color: #bd3623;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -92,12 +97,12 @@ html, body {
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #a5b2ac;
-  border-radius: 5px; 
+  border-radius: 5px;
   box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos na largura total */
 }
 
 .form-card button {
-  background-color: #BD3623;
+  background-color: #bd3623;
   color: #ffd882;
   margin-top: 30px;
   padding: 12px 20px;
@@ -121,231 +126,225 @@ html, body {
   text-align: center;
 }
 
-
-
-
-  /* --- Variáveis e Reset Básico --- */
+/* --- Variáveis e Reset Básico --- */
 :root {
-    --cor-primaria: #BD3623; /* Vermelho */
-    --cor-secundaria: #FFD882; /* Amarelo*/
-    --cor-fundo-claro: #fff; /* Fundo principal claro */
-    --cor-texto-principal: #30471e;
-    --cor-texto-secundario: #a5b2ac;
-    --sombra-leve: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --sombra-densa: 0 8px 15px rgba(0, 0, 0, 0.2);
+  --cor-primaria: #bd3623; /* Vermelho */
+  --cor-secundaria: #ffd882; /* Amarelo*/
+  --cor-fundo-claro: #fff; /* Fundo principal claro */
+  --cor-texto-principal: #30471e;
+  --cor-texto-secundario: #a5b2ac;
+  --sombra-leve: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --sombra-densa: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: var(--cor-texto-principal);
-    background-color: var(--cor-fundo-claro);
-    line-height: 1.6;
-}
-
-/* --- Estilo da Página Sobre Nós --- */
+/*==================================*/
+/*======== Página sobre-nos ========*/
+/*==================================*/
 
 /* Estilo para a tag body da página sobre nós*/
 #page-sobre-nos {
-    padding-top: 100px; /* Garante que o conteúdo comece abaixo de um possível cabeçalho fixo */
+  padding-top: 100px; /* Garante que o conteúdo comece abaixo de um possível cabeçalho fixo */
 }
 
 /* --- Conteúdo Principal (MAIN) --- */
 .sn-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* --- Seções Gerais (Nossa História, Missão, Valores, Equipe) --- */
 .sn-secao {
-    padding: 60px 20px;
-    margin-bottom: 40px;
-    border-radius: 10px;
-    box-shadow: var(--sombra-leve);
-    background-color: #ffffff;
-    transition: transform 0.3s ease-in-out;
+  padding: 60px 20px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  box-shadow: var(--sombra-leve);
+  background-color: #ffffff;
+  transition: transform 0.3s ease-in-out;
 }
 
 .sn-secao:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--sombra-densa);
+  transform: translateY(-5px);
+  box-shadow: var(--sombra-densa);
 }
 
 /* Título da Seção */
 .sn-secao__titulo {
-    text-align: center;
-    color: var(--cor-primaria);
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    border-bottom: 3px solid var(--cor-secundaria);
-    padding-bottom: 10px;
-    display: inline-block;
-    width: 100%;
+  text-align: center;
+  color: var(--cor-primaria);
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  border-bottom: 3px solid var(--cor-secundaria);
+  padding-bottom: 10px;
+  display: inline-block;
+  width: 100%;
 }
 
 /* Parágrafos */
 .sn-secao__paragrafo {
-    font-size: 1.1em;
-    margin-bottom: 15px;
-    color: var(--cor-texto-secundario);
-    text-align: justify;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  color: var(--cor-texto-secundario);
+  text-align: justify;
 }
 
 /* Destaques (strong) */
 .sn-destaque {
-    color: var(--cor-primaria);
-    font-weight: bold;
-    font-size: 1.1em;
+  color: var(--cor-primaria);
+  font-weight: bold;
+  font-size: 1.1em;
 }
 
 /* --- Seção Nossa História --- */
 .sn-historia {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sn-historia p {
-    max-width: 800px;
-    margin: 0 auto 15px;
+  max-width: 800px;
+  margin: 0 auto 15px;
 }
 
 /* --- Figuras e Imagens --- */
 .sn-figura {
-    margin: 30px 0;
-    text-align: center;
+  margin: 30px 0;
+  text-align: center;
 }
 
 .sn-figura__imagem {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-    border: 5px solid var(--cor-secundaria);
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 5px solid var(--cor-secundaria);
 }
 
 /* Figura da História */
 .sn-historia__figura {
-    float: right; /* Posiciona a imagem da história */
-    margin: 15px 0 15px 30px;
+  float: right; /* Posiciona a imagem da história */
+  margin: 15px 0 15px 30px;
 }
 .sn-historia__figura .sn-figura__imagem {
-    max-width: 300px;
+  max-width: 300px;
 }
 
 /* Legenda da Figura */
 .sn-figura__legenda {
-    margin-top: 10px;
-    font-size: 0.9em;
-    color: var(--cor-texto-secundario);
-    font-style: italic;
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: var(--cor-texto-secundario);
+  font-style: italic;
 }
 
 /* --- Seção Valores --- */
 .sn-valores {
-    background-color: var(--cor-secundaria); /* Fundo com a cor secundária para destaque */
-    color: var(--cor-texto-principal);
+  background-color: var(
+    --cor-secundaria
+  ); /* Fundo com a cor secundária para destaque */
+  color: var(--cor-texto-principal);
 }
 
 .sn-valores .sn-secao__titulo {
-    color: var(--cor-primaria);
-    border-color: var(--cor-primaria);
+  color: var(--cor-primaria);
+  border-color: var(--cor-primaria);
 }
 
 .sn-valores__lista {
-    list-style: none; /* Remove marcadores padrão */
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+  list-style: none; /* Remove marcadores padrão */
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .sn-valores__item {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: var(--sombra-leve);
-    transition: background-color 0.3s;
-    border-left: 5px solid var(--cor-primaria);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--sombra-leve);
+  transition: background-color 0.3s;
+  border-left: 5px solid var(--cor-primaria);
 }
 
 .sn-valores__item:hover {
-    background-color: #fff8e1; /* Leve alteração ao passar o mouse */
+  background-color: #fff8e1; /* Leve alteração ao passar o mouse */
 }
 
 .sn-valores__item .sn-destaque {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 1.2em;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.2em;
 }
 
 /* --- Seção Equipe --- */
 .sn-equipe {
-    text-align: center;
+  text-align: center;
 }
 
 /* Container para as figuras da equipe (para alinhar horizontalmente) */
 .sn-equipe__figuras-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap; /* Permite quebras em telas menores */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Permite quebras em telas menores */
 }
 
 .sn-figura__imagem--equipe {
-    max-width: 45%; /* Cada imagem ocupa no máximo 45% do container em telas grandes */
-    height: 300px;
-    object-fit: cover;
-    transition: all 0.5s ease-in-out;
+  max-width: 45%; /* Cada imagem ocupa no máximo 45% do container em telas grandes */
+  height: 300px;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
 }
 
 .sn-figura__imagem--equipe:hover {
-    transform: scale(1.03);
-    border-color: var(--cor-primaria);
-    box-shadow: var(--sombra-densa);
+  transform: scale(1.03);
+  border-color: var(--cor-primaria);
+  box-shadow: var(--sombra-densa);
 }
 
 /* --- Media Queries (Responsividade) --- */
 
 @media (max-width: 768px) {
-    .sn-secao {
-        padding: 40px 15px;
-    }
+  .sn-secao {
+    padding: 40px 15px;
+  }
 
-    .sn-secao__titulo {
-        font-size: 2em;
-    }
+  .sn-secao__titulo {
+    font-size: 2em;
+  }
 
-    /* Ajuste para a figura da história em telas menores */
-    .sn-historia__figura {
-        float: none;
-        margin: 20px auto;
-    }
+  /* Ajuste para a figura da história em telas menores */
+  .sn-historia__figura {
+    float: none;
+    margin: 20px auto;
+  }
 
-    /* As imagens da equipe ficam 100% da largura em telas pequenas */
-    .sn-equipe__figuras-container {
-        flex-direction: column;
-        align-items: center;
-    }
+  /* As imagens da equipe ficam 100% da largura em telas pequenas */
+  .sn-equipe__figuras-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .sn-figura__imagem--equipe {
-        max-width: 100%;
-    }
+  .sn-figura__imagem--equipe {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
-    .sn-secao__titulo {
-        font-size: 1.7em;
-    }
+  .sn-secao__titulo {
+    font-size: 1.7em;
+  }
 
-    .sn-secao__paragrafo {
-        font-size: 1em;
-    }
+  .sn-secao__paragrafo {
+    font-size: 1em;
+  }
 }
