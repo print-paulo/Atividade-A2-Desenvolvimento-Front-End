@@ -56,6 +56,8 @@ body {
 
 /*==================================*/
 /*======= Pagina de Cadastro =======*/
+/*=======         e          =======*/
+/*======= login (formulários)=======*/
 /*==================================*/
 .form-container {
   display: flex; /* Centraliza o formulario no meio horizontalmente*/
@@ -77,6 +79,13 @@ body {
   color: #BD3623;
   text-align: center;
   margin-bottom: 0px;
+}
+
+.login h2 {
+  font-size: 2.5em;
+  color: #BD3623;
+  text-align: center;
+  margin-bottom: -60px;
 }
 
 .form-card input[type="text"],
@@ -104,4 +113,14 @@ body {
 }
 .form-card button:hover {
   background-color: #b29047;
+}
+
+#entrarCadastro {
+  margin-top: -80px;
+  text-align: center;
+}
+
+#jaTemLogin {
+  margin-top: -5px;
+  text-align: center;
 }
