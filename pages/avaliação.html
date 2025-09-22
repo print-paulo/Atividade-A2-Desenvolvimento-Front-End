@@ -25,13 +25,13 @@
       </div>
     </header>
     <main>
-      <section id="Avaliação">
+      <section class="container">
         <h1>Avalie a Nossa Pizzaria</h1>
         <form action="avaliar" method="post">
           <label for="nome">Seu nome:</label>
           <input type="text" id="nome" name="nome" required />
           <label>Sua avaliação:</label>
-          <div id="estrelas">
+          <div class="estrelas">
             Estrela 5
             <label for="estrela5"></label>
             <input type="radio" id="estrela5" name="avaliacao" value="5"required/>
@@ -48,14 +48,19 @@
             <label for="estrela1"></label>
             <input type="radio" id="estrela1" name="avaliacao" value="1" />
           </div>
+          <method="post" class="comentario">
           <label for="comentario">Comentário:</label>
-          <textarea
-            id="comentario"
-            name="comentario"
-            rows="5"
-            placeholder="Conte-nos o que achou da sua experiência!"
-          ></textarea>
+          <div class="Conte-nos o que achou da sua experiência!"
+            <textarea
+              id="comentario"
+              name="comentario"
+              rows="5"
+              placeholder="Conte-nos o que achou da sua experiência!"
+            ></textarea>
+          </div>
+          <div>
           <button type="submit">Enviar Avaliação</button>
+          </div>
         </form>
       </section>
     </main>
