@@ -2,42 +2,45 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />   
-    <title>Ambiente</title>
-    <link rel="stylesheet" href="../css/styles.css"  />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/header-style.css" />
+    <title>Ambiente - DevPizza</title>
+    <link rel="stylesheet" href="../css/styles.css" />
   </head>
-  <body>
+  <body id="page-ambiente">
     <header class="main-header">
       <h1>DevPizza</h1>
       <div>
-        <nav>
-          <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="ambiente.html">O Ambiente</a></li>
-            <li><a href="sobre-nos.html">Sobre Nós</a></li>
-            <li><a href="cardapio.html">Cardapio</a></li>
-            <li><a href="avaliação.html">Avaliações</a></li>
-            <li><a href="contato.html">Contato</a></li>
-            <li><a href="login.html">Login</a></li>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="../index.html" class="main-nav__link">Inicio</a></li>
+            <li class="main-nav__item"><a href="ambiente.html" class="main-nav__link main-nav__link--active">O Ambiente</a></li>
+            <li class="main-nav__item"><a href="sobre-nos.html" class="main-nav__link">Sobre Nós</a></li>
+            <li class="main-nav__item"><a href="cardapio.html" class="main-nav__link">Cardapio</a></li>
+            <li class="main-nav__item"><a href="avaliação.html" class="main-nav__link">Avaliações</a></li>
+            <li class="main-nav__item"><a href="contato.html" class="main-nav__link">Contato</a></li>
+            <li class="main-nav__item"><a href="login.html" class="main-nav__link">Login</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <main>
-      <section id="ambiente">
-        <h1>O Ambiente</h1>
-        <img src="../img/devpizzapgn/ambiente01.jpg" alt="" />
-        <img src="../img/devpizzapgn/ambiente02.webp" alt="" />
-        <img src="../img/devpizzapgn/ambiente03.webp" alt="" />
-        <img src="../img/devpizzapgn/ambiente04.webp" alt="" />
-        <img src="../img/devpizzapgn/ambiente05.jpg" alt="" />
-        <img src="../img/devpizzapgn/oambinete10.jpg" alt="" />
-        <img src="../img/devpizzapgn/pgnOambiente09.jpg" alt="" />
-        <img src="../img/devpizzapgn/pizza-366111_640.jpg" alt="" />
+    <main class="ambiente-main">
+      <section class="ambiente-secao">
+        <h1 class="ambiente-secao__titulo">Ambiente:</h1>
+        <div class="ambiente-galeria">
+          <img class="ambiente-galeria__imagem" src="../img/devpizzapgn/ambiente01.jpg" alt="Ambiente aconchegante da pizzaria" />
+          <img class="ambiente-galeria__imagem" src="../img/devpizzapgn/ambiente02.webp" alt="Mesas e decoração interna" />
+          <img class="ambiente-galeria__imagem" src="../img/devpizzapgn/ambiente03.webp" alt="Detalhe do forno a lenha" />
+          <img class="ambiente-galeria__imagem" src="../img/devpizzapgn/ambiente04.webp" alt="Área de bar e balcão" />
+          <img class="ambiente-galeria__imagem" src="../img/devpizzapgn/ambiente05.jpg" alt="Perspectiva da entrada do restaurante" />
+          <img class="ambiente-galeria__imagem" src="../img/devpizzapgn/oambinete10.jpg" alt="Foto noturna do ambiente interno" />
+          <img class="ambiente-galeria__imagem" src="../img/devpizzapgn/pgnOambiente09.jpg" alt="Decoração rústica com luz baixa" />
+          <img class="ambiente-galeria__imagem" src="../img/devpizzapgn/pizza-366111_640.jpg" alt="Pizza em primeiro plano" />
+        </div>
       </section>
     </main>
     <br />
-    <footer>
+<footer>
       <div>
         <h3>DevPizza</h3>
         <p>🍕 A melhor pizza da cidade desde 1995</p>
@@ -58,6 +61,7 @@
         <a href="#">Facebook</a> | <a href="#">Instagram</a> |
         <a href="#">WhatsApp</a>
       </div>
+
       <p>&copy; 2025 DevPizza - Todos os direitos reservados.</p>
     </footer>
   </body>

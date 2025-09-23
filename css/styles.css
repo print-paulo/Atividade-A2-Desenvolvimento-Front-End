@@ -348,3 +348,119 @@ body {
     font-size: 1em;
   }
 }
+
+/* --- Pagina --- */
+
+/* Estilo para o corpo da página "O Ambiente" */
+#page-ambiente {
+    padding-top: 100px; /* Garante que o conteúdo comece abaixo do cabeçalho fixo */
+}
+
+/* Container principal para a galeria */
+.ambiente-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Seção do ambiente */
+.ambiente-secao {
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* Título da seção */
+.ambiente-secao__titulo {
+    color: var(--cor-texto-principal);
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    border-bottom: 3px solid var(--cor-secundaria);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Galeria de imagens */
+.ambiente-galeria {
+    display: grid;
+    /* Grid responsivo: cada imagem tenta ocupar um espaço de 300px,
+       e o grid se ajusta para o número de colunas ideal */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilo para cada imagem */
+.ambiente-galeria__imagem {
+    width: 100%;
+    height: 250px; /* Altura fixa para alinhar as imagens */
+    object-fit: cover; /* Recorta a imagem para preencher o espaço sem distorcer */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 3px solid var(--cor-secundaria); /* Borda com a cor amarela */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.ambiente-galeria__imagem:hover {
+    transform: scale(1.05); /* Aumenta a imagem ligeiramente */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+    border-color: var(--cor-primaria); /* Muda a cor da borda no hover */
+}
+
+/*==============================/
+/======= Página Contato =======/
+/==============================*/
+
+.contato-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 40px 20px;
+
+  background-image: url("../img/cardapio_pizzas_salgadas.png"); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.contato-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  max-width: 700px;
+  width: 100%;
+}
+
+
+/*==============================/
+/========== Rodapé ============/
+/==============================*/
+footer {
+  background-color: #BD3623;
+  color: #FFD882;
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer h3 {
+  margin-bottom: 10px;
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #FFD882;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #B29047;
+}
