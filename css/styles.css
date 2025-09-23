@@ -6,15 +6,18 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   padding: 0;
-  padding-top: 91px; /*Espaço para o header fixo em cima da tela (para não ficar na frente da página)*/
+  flex-direction: column;
+  min-height: 100vh;
   color: var(--cor-texto-principal);
   background-color: var(--cor-fundo-claro);
   line-height: 1.6;
-
+}
+main {
+  padding-top: 91px;
+  flex: 1;
 }
 html,
 body {
-  height: 100%;
   margin: 0;
 }
 
@@ -472,9 +475,7 @@ label:first-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 70vh;
   padding: 40px 20px;
-
   background-image: url("../img/cardapio_pizzas_salgadas.png"); 
   background-size: cover;
   background-position: center;
@@ -496,7 +497,6 @@ label:first-of-type {
 /==============================*/
 footer {
   background-color: #BD3623;
-  background-position: 160px;
   color: #FFD882;
   padding: 30px 20px;
   text-align: left;
