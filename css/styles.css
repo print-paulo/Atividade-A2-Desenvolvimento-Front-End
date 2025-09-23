@@ -10,6 +10,7 @@ body {
   color: var(--cor-texto-principal);
   background-color: var(--cor-fundo-claro);
   line-height: 1.6;
+
 }
 html,
 body {
@@ -370,12 +371,12 @@ body {
 .ambiente-secao {
     text-align: center;
     color: #bd3623;
-    padding: 40px 0;
+    padding: 20px;
 }
 
 /* Título da seção */
 .ambiente-secao__titulo {
-    color: ar(--cor-vtexto-principal);
+    color: var(--cor-vtexto-principal);
     font-size: 2.5em;
     margin-bottom: 30px;
     border-bottom: 3px solid var(--cor-secundaria);
@@ -443,6 +444,7 @@ body {
 /==============================*/
 footer {
   background-color: #BD3623;
+  background-position: 160px;
   color: #FFD882;
   padding: 30px 20px;
   text-align: left;
