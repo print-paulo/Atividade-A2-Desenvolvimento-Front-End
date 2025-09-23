@@ -73,6 +73,7 @@ body {
   justify-content: center; /* Também centraliza o formulario no meio horizontalmente*/
   align-items: center; /* Centraliza o formulario no meio verticalmente*/
   height: 100%; /* Define a altura da seção como 100 da altura da viewport*/
+  padding-bottom: 20px;
 }
 
 .form-card {
@@ -84,7 +85,8 @@ body {
 }
 
 .cadastro h2,
-.login h2 {
+.login h2,
+.avaliacao h2 {
   font-size: 2.5em;
   color: #bd3623;
   text-align: center;
@@ -101,6 +103,56 @@ body {
   border: 1px solid #a5b2ac;
   border-radius: 5px;
   box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos na largura total */
+}
+
+.avaliacao {
+  min-height: 100vh;
+  background: url('../img/Fundo_Pagina_Avaliação_HTML_1.jpeg');
+  background-size: cover;
+  background-position: center
+}
+.estrelas input[type="radio"] {
+  display: none;
+}
+
+.estrelas {
+  display: flex;
+  justify-content: flex-end;
+  direction: rtl; /* Direção da direita para a esquerda */
+  font-size: 4em;
+  color: #ccc;
+}
+
+.estrelas label {
+  cursor: pointer;
+  padding: 0 5px;
+  transition: color 0.2s;
+}
+
+.estrelas label::before {
+  content: '\2605'; /* Inserir a estrela */
+}
+
+/* Alterar a cor para laranja ao passar o mouse */
+.estrelas label:hover,
+.estrelas label:hover ~ label {
+  color: orange;
+}
+
+/* Quando o input (radio) estiver marcado, altere a cor da estrela correspondente */
+.estrelas input[type="radio"]:checked ~ label {
+  color: gold;
+}
+
+/* Adicionar a cor dourada para as estrelas anteriores ao input marcado */
+.estrelas input[type="radio"]:checked {
+  color: gold;
+}
+
+label:first-of-type {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .form-card button {

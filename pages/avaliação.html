@@ -8,8 +8,8 @@
   </head>
   <body>
     <header class="main-header">
-      <h1>DevPizza</h1>
-        <div
+      <h2>DevPizza</h2>
+        <div>
           <nav>
             <ul>
               <li><a href="../index.html">Inicio</a></li>
@@ -25,7 +25,7 @@
     </header>
     <main>
       <section class="avaliacao">
-        <h1>Avalie a Nossa Pizzaria</h1>
+        <h2>Avalie a Nossa Pizzaria</h2>
         <section class="form-container">
           <div class="form-card">
             <form action="avaliar" method="post">
@@ -33,31 +33,25 @@
               <input type="text" id="nome" name="nome" required />
               <label>Sua avaliação:</label>
               <div class="estrelas">
-                Estrela 5
+                <input type="radio" id="estrela5" name="estrela" value="5">
                 <label for="estrela5"></label>
-                <input type="radio" id="estrela5" name="avaliacao" value="5"required/>
-                Estrela 4
+              
+                <input type="radio" id="estrela4" name="estrela" value="4">
                 <label for="estrela4"></label>
-                <input type="radio" id="estrela4" name="avaliacao" value="4" />
-                Estrela 3
+              
+                <input type="radio" id="estrela3" name="estrela" value="3">
                 <label for="estrela3"></label>
-                <input type="radio" id="estrela3" name="avaliacao" value="3" />
-                Estrela 2
+              
+                <input type="radio" id="estrela2" name="estrela" value="2">
                 <label for="estrela2"></label>
-                <input type="radio" id="estrela2" name="avaliacao" value="2" />
-                Estrela 1
+              
+                <input type="radio" id="estrela1" name="estrela" value="1">
                 <label for="estrela1"></label>
-                <input type="radio" id="estrela1" name="avaliacao" value="1" />
               </div>
               <method="post" class="comentario">
               <label for="comentario">Comentário:</label>
-              <div class="Conte-nos o que achou da sua experiência!"
-                <textarea
-                  id="comentario"
-                  name="comentario"
-                  rows="5"
-                  placeholder="Conte-nos o que achou da sua experiência!"
-                ></textarea>
+              <div class="Conte-nos o que achou da sua experiência!">
+                <textarea id="comentario" name="comentatio" rows="5" cols="30" placeholder="Conte-nos o que achou da sua experiência!"></textarea>
               </div>
               <div>
               <button type="submit">Enviar Avaliação</button>
