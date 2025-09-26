@@ -109,11 +109,12 @@ body {
 }
 
 .avaliacao {
-  min-height: 100vh;
+  min-height: 400px;
   background: url('../img/Fundo_Pagina_Avaliação_HTML_1.jpeg');
   background-size: cover;
   background-position: center
 }
+
 .estrelas input[type="radio"] {
   display: none;
 }
