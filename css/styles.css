@@ -125,6 +125,7 @@ body {
   direction: rtl; /* Direção da direita para a esquerda */
   font-size: 4em;
   color: #ccc;
+  margin-left: 78px;
 }
 
 .estrelas label {
