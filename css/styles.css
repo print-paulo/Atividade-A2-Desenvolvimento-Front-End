@@ -445,7 +445,6 @@ body section:nth-child(even) {
   border-radius: 10px;
   margin: 20px auto;
   max-width: 1200px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   color: #30471E;                    /* Mantém contraste do texto */
 }
 
