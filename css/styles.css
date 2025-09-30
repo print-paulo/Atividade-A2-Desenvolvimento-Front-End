@@ -437,7 +437,6 @@ body section:nth-child(odd) {
   border-radius: 10px;
   margin: 20px auto;
   max-width: 1200px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 body section:nth-child(even) {
@@ -449,12 +448,19 @@ body section:nth-child(even) {
 }
 
 /* Imagens */
-body img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 15px 0;
-  border-radius: 8px;
+.paragrafoIndex h2 {
+  color: #BD3623;
+}
+.paragrafoIndex {
+  display: flex;
+  flex-direction: column;
+}
+.paragrafoIndex img {
+  margin-bottom: 30px;
+  margin-top: 30px ;
+  align-self: center;
+  height: 50%;
+  width: 50%;
 }
 
 /* Inputs e botão de busca */
@@ -479,6 +485,10 @@ body button {
 
 body button:hover {
   background-color: #B29047;
+}
+
+.paragrafoCardapio h2 {
+  color: #BD3623;
 }
 /* --- Pagina --- */
 
