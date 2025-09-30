@@ -110,9 +110,6 @@ body {
 
 .avaliacao {
   min-height: 400px;
-  background: url('../img/Fundo_Pagina_Avaliação_HTML_1.jpeg');
-  background-size: cover;
-  background-position: center
 }
 
 .estrelas input[type="radio"] {
@@ -439,7 +436,6 @@ body section:nth-child(odd) {
   border-radius: 10px;
   margin: 20px auto;
   max-width: 1200px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 body section:nth-child(even) {
