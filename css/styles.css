@@ -522,7 +522,7 @@ body button:hover {
 }
 
 /* Estilo para cada imagem */
-.ambiente-galeria__imagem {
+.ambiente-galeria img {
     width: 100%;
     height: 250px; /* Altura fixa para alinhar as imagens */
     object-fit: cover; /* Recorta a imagem para preencher o espaço sem distorcer */
@@ -533,7 +533,7 @@ body button:hover {
 }
 
 /* Efeito ao passar o mouse */
-.ambiente-galeria__imagem:hover {
+.ambiente-galeria img:hover {
     transform: scale(1.05); /* Aumenta a imagem ligeiramente */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
     border-color: var(--cor-primaria); /* Muda a cor da borda no hover */
