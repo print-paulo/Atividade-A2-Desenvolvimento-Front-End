@@ -83,7 +83,7 @@ body {
   background-color: #fff; /* Cor de fundo branca para o destarcar */
   padding: 40px;
   border-radius: 10px; /* Arredonda as bordas*/
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+  box-shadow: var(--sombra-leve); /* Adiciona uma sombra suave */
   text-align: center; /* Centraliza o texto dentro do card */
 }
 
@@ -108,11 +108,20 @@ body {
   box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos na largura total */
 }
 
+#comentario {
+  width: 250px; /* Largura da caixa de texto */
+  height: 100px; /* Altura da caixa de texto */
+  padding: 8px;
+  border: 1px solid #a5b2ac;
+  border-radius: 5px; /* Cantos arredondados */
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  font-size: 0.9em;
+  resize: none; /* Permite redimensionar apenas verticalmente */
+}
+
 .avaliacao {
   min-height: 100vh;
-  background: url('../img/Fundo_Pagina_Avaliação_HTML_1.jpeg');
-  background-size: cover;
-  background-position: center
 }
 .estrelas input[type="radio"] {
   display: none;
@@ -120,8 +129,8 @@ body {
 
 .estrelas {
   display: flex;
-  justify-content: flex-end;
-  direction: rtl; /* Direção da direita para a esquerda */
+  flex-direction: row-reverse;
+  margin-right: 13vh;
   font-size: 4em;
   color: #ccc;
 }
@@ -139,7 +148,7 @@ body {
 /* Alterar a cor para laranja ao passar o mouse */
 .estrelas label:hover,
 .estrelas label:hover ~ label {
-  color: orange;
+  color: goldenrod;
 }
 
 /* Quando o input (radio) estiver marcado, altere a cor da estrela correspondente */
@@ -555,20 +564,28 @@ body button:hover {
 
 .contato-container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 40px 20px;
-  background-image: url("../img/cardapio_pizzas_salgadas.png"); 
+  flex-direction: column;
+  padding: 40px 50px;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-color:  #FFF5D1
+}
+
+.contato-box {
+  padding: 30px;
+}
+
+.contato-container h2 {
+  color: #BD3623;
 }
 
 .contato-card {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: var(--sombra-leve);
   max-width: 700px;
   width: 100%;
 }
