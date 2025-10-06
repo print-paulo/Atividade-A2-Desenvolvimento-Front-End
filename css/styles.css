@@ -1,240 +1,341 @@
-/*===============================*/
-/*======= Estilos globais =======*/
-/*===============================*/
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  padding: 0;
-  flex-direction: column;
-  min-height: 100vh;
-  color: var(--cor-texto-principal);
-  background-color: var(--cor-fundo-claro);
-  line-height: 1.6;
-}
-main {
-  padding-top: 91px;
-  flex: 1;
-}
-html,
-body {
-  margin: 0;
-}
-
-/*==================================*/
-/*======== Header Principal ========*/
-/*==================================*/
-.main-header {
-  background-color: #bd3623;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  /*Fixar o header no topo da tela*/
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%; /* Garante que o cabeçalho ocupe toda a largura */
-  z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
-}
-
-.main-header h1 {
-  color: #ffd882;
-  text-decoration: none;
-  margin: 0;
-}
-
-.main-header ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  padding-right: 40px;
-  display: flex;
-  gap: 20px;
-}
-
-.main-header ul a {
-  color: #ffd882;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-/* Efeito ao passar o mouse por cima de cada elemento em navegação*/
-.main-header ul a:hover {
-  color: #b29047;
-}
-
-/*==================================*/
-/*======= Pagina de Cadastro =======*/
-/*=======         e          =======*/
-/*======= login (formulários)=======*/
-/*==================================*/
-.form-container {
-  display: flex; /* Centraliza o formulario no meio horizontalmente*/
-  justify-content: center; /* Também centraliza o formulario no meio horizontalmente*/
-  align-items: center; /* Centraliza o formulario no meio verticalmente*/
-  height: 100%; /* Define a altura da seção como 100 da altura da viewport*/
-  padding-bottom: 20px;
-}
-
-.form-card {
-  background-color: #fff; /* Cor de fundo branca para o destarcar */
-  padding: 40px;
-  border-radius: 10px; /* Arredonda as bordas*/
-  box-shadow: var(--sombra-leve); /* Adiciona uma sombra suave */
-  text-align: center; /* Centraliza o texto dentro do card */
-}
-
-.cadastro h2,
-.login h2,
-.avaliacao h2 {
-  font-size: 2.5em;
-  color: #bd3623;
-  text-align: center;
-  margin: 20px;
-}
-
-.form-card input[type="text"],
-.form-card input[type="email"],
-.form-card input[type="password"],
-.form-card input[type="tel"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #a5b2ac;
-  border-radius: 5px;
-  box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos na largura total */
-}
-
-#comentario {
-  width: 250px; /* Largura da caixa de texto */
-  height: 100px; /* Altura da caixa de texto */
-  padding: 8px;
-  border: 1px solid #a5b2ac;
-  border-radius: 5px; /* Cantos arredondados */
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-  font-size: 0.9em;
-  resize: none; /* Permite redimensionar apenas verticalmente */
-}
-
-.avaliacao {
-  min-height: 100vh;
-}
-.estrelas input[type="radio"] {
-  display: none;
-}
-
-.estrelas {
-  display: flex;
-  flex-direction: row-reverse;
-  margin-right: 13vh;
-  font-size: 4em;
-  color: #ccc;
-}
-
-.estrelas label {
-  cursor: pointer;
-  padding: 0 5px;
-  transition: color 0.2s;
-}
-
-.estrelas label::before {
-  content: '\2605'; /* Inserir a estrela */
-}
-
-/* Alterar a cor para laranja ao passar o mouse */
-.estrelas label:hover,
-.estrelas label:hover ~ label {
-  color: goldenrod;
-}
-
-/* Quando o input (radio) estiver marcado, altere a cor da estrela correspondente */
-.estrelas input[type="radio"]:checked ~ label {
-  color: gold;
-}
-
-/* Adicionar a cor dourada para as estrelas anteriores ao input marcado */
-.estrelas input[type="radio"]:checked {
-  color: gold;
-}
-
-label:first-of-type {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-.form-card button {
-  background-color: #bd3623;
-  color: #ffd882;
-  margin-top: 30px;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-.form-card button:hover {
-  background-color: #b29047;
-}
-
-#entrarCadastro {
-  text-align: center;
-  margin-top: 20px;
-  padding-bottom: 20px;
-}
-
-#jaTemLogin {
-  text-align: center;
-  margin-top: 20px;
-  padding-bottom: 20px;
-}
-
-/* --- Variáveis e Reset Básico --- */
+/* ========================================
+   1. VARIÁVEIS CSS
+======================================== */
 :root {
-  --cor-primaria: #bd3623; /* Vermelho */
-  --cor-secundaria: #ffd882; /* Amarelo*/
-  --cor-fundo-claro: #fff; /* Fundo principal claro */
+  --cor-primaria: #bd3623;
+  --cor-secundaria: #ffd882;
+  --cor-fundo-claro: #fff;
+  --cor-fundo-suave: #fff5d1;
   --cor-texto-principal: #30471e;
   --cor-texto-secundario: #a5b2ac;
   --sombra-leve: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --sombra-media: 0 4px 10px rgba(0, 0, 0, 0.2);
   --sombra-densa: 0 8px 15px rgba(0, 0, 0, 0.2);
+  --transicao-padrao: 0.3s ease;
 }
 
+/* ========================================
+   2. RESET E ESTILOS GLOBAIS
+======================================== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/*==================================*/
-/*======== Página sobre-nos ========*/
-/*==================================*/
-
-/* Estilo para a tag body da página sobre nós*/
-#page-sobre-nos {
-  padding-top: 100px; /* Garante que o conteúdo comece abaixo de um possível cabeçalho fixo */
+html,
+body {
+  margin: 0;
+  min-height: 100vh;
 }
 
-/* --- Conteúdo Principal (MAIN) --- */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  display: flex;
+  flex-direction: column;
+  color: var(--cor-texto-principal);
+  background-color: var(--cor-fundo-claro);
+  line-height: 1.6;
+}
+
+main {
+  flex: 1;
+  padding-top: 91px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color var(--transicao-padrao);
+}
+
+a:hover {
+  color: #b29047;
+}
+
+/* ========================================
+   3. HEADER E NAVEGAÇÃO
+======================================== */
+.main-header {
+  background-color: var(--cor-primaria);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: var(--sombra-leve);
+}
+
+.main-header h1 {
+  color: var(--cor-secundaria);
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.main-header nav ul,
+.main-nav__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.main-header ul a,
+.main-nav__link {
+  color: var(--cor-secundaria);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all var(--transicao-padrao);
+}
+
+.main-header ul a:hover,
+.main-nav__link:hover {
+  color: #b29047;
+  background-color: rgba(255, 216, 130, 0.1);
+}
+
+.main-header ul a.active,
+.main-nav__link--active {
+  border-bottom: 3px solid var(--cor-secundaria);
+}
+
+/* ========================================
+   4. COMPONENTES REUTILIZÁVEIS
+======================================== */
+
+/* --- Botões --- */
+.btn-primary,
+.form-card button,
+body button {
+  background-color: var(--cor-primaria);
+  color: var(--cor-secundaria);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  transition: all var(--transicao-padrao);
+}
+
+.btn-primary:hover,
+.form-card button:hover,
+body button:hover {
+  background-color: #b29047;
+  transform: translateY(-2px);
+  box-shadow: var(--sombra-leve);
+}
+
+/* --- Formulários --- */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 91px);
+  padding: 40px 20px;
+}
+
+.form-card {
+  background-color: var(--cor-fundo-claro);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: var(--sombra-leve);
+  max-width: 500px;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: var(--cor-texto-principal);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea,
+.form-card input[type="text"],
+.form-card input[type="email"],
+.form-card input[type="password"],
+.form-card input[type="tel"],
+body input[type="search"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid var(--cor-texto-secundario);
+  border-radius: 5px;
+  font-size: 1em;
+  font-family: inherit;
+  transition: border-color var(--transicao-padrao);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--cor-primaria);
+}
+
+.form-group textarea,
+#comentario {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+.form-link,
+#entrarCadastro,
+#jaTemLogin {
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: normal;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+/* ========================================
+   5. PÁGINAS ESPECÍFICAS
+======================================== */
+
+/* --- Página Inicial --- */
+.hero,
+.destaque,
+.cta {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  background-color: var(--cor-fundo-suave);
+}
+
+.hero h2,
+.destaque h2,
+.cta h2,
+.paragrafoIndex h2 {
+  color: var(--cor-primaria);
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.hero img,
+.destaque img {
+  margin: 30px auto;
+  border-radius: 10px;
+  box-shadow: var(--sombra-media);
+}
+
+.paragrafoIndex {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.paragrafoIndex img {
+  margin: 30px auto;
+  max-width: 800px;
+  border-radius: 10px;
+}
+
+/* --- Página de Cadastro/Login/Avaliação --- */
+.cadastro h2,
+.login h2,
+.avaliacao h2 {
+  font-size: 2.5em;
+  color: var(--cor-primaria);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.avaliacao {
+  min-height: 100vh;
+}
+
+/* Sistema de Estrelas */
+.estrelas {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  font-size: 3em;
+  gap: 5px;
+  margin: 20px 0;
+}
+
+.estrelas input[type="radio"] {
+  display: none;
+}
+
+.estrelas label {
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.estrelas label::before {
+  content: '\2605';
+}
+
+.estrelas label:hover,
+.estrelas label:hover ~ label {
+  color: goldenrod;
+}
+
+.estrelas input[type="radio"]:checked ~ label {
+  color: gold;
+}
+
+/* --- Página Sobre Nós --- */
+#page-sobre-nos {
+  padding-top: 100px;
+}
+
 .sn-main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* --- Seções Gerais (Nossa História, Missão, Valores, Equipe) --- */
 .sn-secao {
   padding: 60px 20px;
   margin-bottom: 40px;
   border-radius: 10px;
   box-shadow: var(--sombra-leve);
-  background-color: #ffffff;
-  transition: transform 0.3s ease-in-out;
+  background-color: var(--cor-fundo-claro);
+  transition: transform var(--transicao-padrao), box-shadow var(--transicao-padrao);
 }
 
 .sn-secao:hover {
@@ -242,7 +343,6 @@ label:first-of-type {
   box-shadow: var(--sombra-densa);
 }
 
-/* Título da Seção */
 .sn-secao__titulo {
   text-align: center;
   color: var(--cor-primaria);
@@ -250,11 +350,8 @@ label:first-of-type {
   margin-bottom: 30px;
   border-bottom: 3px solid var(--cor-secundaria);
   padding-bottom: 10px;
-  display: inline-block;
-  width: 100%;
 }
 
-/* Parágrafos */
 .sn-secao__paragrafo {
   font-size: 1.1em;
   margin-bottom: 15px;
@@ -262,14 +359,11 @@ label:first-of-type {
   text-align: justify;
 }
 
-/* Destaques (strong) */
 .sn-destaque {
   color: var(--cor-primaria);
   font-weight: bold;
-  font-size: 1.1em;
 }
 
-/* --- Seção Nossa História --- */
 .sn-historia {
   display: flex;
   flex-direction: column;
@@ -281,31 +375,27 @@ label:first-of-type {
   margin: 0 auto 15px;
 }
 
-/* --- Figuras e Imagens --- */
 .sn-figura {
   margin: 30px 0;
   text-align: center;
 }
 
 .sn-figura__imagem {
-  width: 100%;
   max-width: 350px;
-  height: auto;
   border-radius: 8px;
   object-fit: cover;
   border: 5px solid var(--cor-secundaria);
 }
 
-/* Figura da História */
 .sn-historia__figura {
-  float: right; /* Posiciona a imagem da história */
+  float: right;
   margin: 15px 0 15px 30px;
 }
+
 .sn-historia__figura .sn-figura__imagem {
   max-width: 300px;
 }
 
-/* Legenda da Figura */
 .sn-figura__legenda {
   margin-top: 10px;
   font-size: 0.9em;
@@ -313,61 +403,43 @@ label:first-of-type {
   font-style: italic;
 }
 
-/* --- Seção Valores --- */
 .sn-valores {
-  background-color: var(
-    --cor-secundaria
-  ); /* Fundo com a cor secundária para destaque */
-  color: var(--cor-texto-principal);
-}
-
-.sn-valores .sn-secao__titulo {
-  color: var(--cor-primaria);
-  border-color: var(--cor-primaria);
+  background-color: var(--cor-secundaria);
 }
 
 .sn-valores__lista {
-  list-style: none; /* Remove marcadores padrão */
-  padding: 0;
+  list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
 .sn-valores__item {
-  background-color: #ffffff;
+  background-color: var(--cor-fundo-claro);
   padding: 20px;
   border-radius: 8px;
   box-shadow: var(--sombra-leve);
-  transition: background-color 0.3s;
   border-left: 5px solid var(--cor-primaria);
+  transition: background-color var(--transicao-padrao);
 }
 
 .sn-valores__item:hover {
-  background-color: #fff8e1; /* Leve alteração ao passar o mouse */
+  background-color: #fff8e1;
 }
 
-.sn-valores__item .sn-destaque {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 1.2em;
-}
-
-/* --- Seção Equipe --- */
 .sn-equipe {
   text-align: center;
 }
 
-/* Container para as figuras da equipe (para alinhar horizontalmente) */
 .sn-equipe__figuras-container {
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap; /* Permite quebras em telas menores */
+  flex-wrap: wrap;
 }
 
 .sn-figura__imagem--equipe {
-  max-width: 45%; /* Cada imagem ocupa no máximo 45% do container em telas grandes */
+  max-width: 45%;
   height: 300px;
   object-fit: cover;
   transition: all 0.5s ease-in-out;
@@ -379,231 +451,310 @@ label:first-of-type {
   box-shadow: var(--sombra-densa);
 }
 
-/* --- Media Queries (Responsividade) --- */
-
-@media (max-width: 768px) {
-  .sn-secao {
-    padding: 40px 15px;
-  }
-
-  .sn-secao__titulo {
-    font-size: 2em;
-  }
-
-  /* Ajuste para a figura da história em telas menores */
-  .sn-historia__figura {
-    float: none;
-    margin: 20px auto;
-  }
-
-  /* As imagens da equipe ficam 100% da largura em telas pequenas */
-  .sn-equipe__figuras-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .sn-figura__imagem--equipe {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .sn-secao__titulo {
-    font-size: 1.7em;
-  }
-
-  .sn-secao__paragrafo {
-    font-size: 1em;
-  }
-}
-/*Página Cardapio*/
-/* Estilo principal do body */
-body {
-  font-family: 'Arial', sans-serif; /* Fonte limpa e legível */
-  color: #30471E;                   /* Texto principal verde escuro */
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-}
-
-/* Links */
-body a {
-  color: #BD3623;                    /* Links em vermelho marcante */
-  text-decoration: none;
-  font-weight: bold;
-}
-
-body a:hover {
-  color: #B29047;                    /* Hover dourado */
-}
-
-
-
-/* Seções com cores alternadas para destaque */
-body section:nth-child(odd) {
-  background-color: #FFF5D1;         /* Amarelo suave */
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px auto;
+/* --- Página Cardápio --- */
+.paragrafoCardapio {
   max-width: 1200px;
-}
-
-body section:nth-child(even) {
+  margin: 0 auto;
   padding: 20px;
-  border-radius: 10px;
-  margin: 20px auto;
-  max-width: 1200px;
-  color: #30471E;                    /* Mantém contraste do texto */
-}
-
-/* Imagens */
-.paragrafoIndex h2 {
-  color: #BD3623;
-}
-.paragrafoIndex {
-  display: flex;
-  flex-direction: column;
-}
-.paragrafoIndex img {
-  margin-bottom: 30px;
-  margin-top: 30px ;
-  align-self: center;
-  height: 50%;
-  width: 50%;
-}
-
-/* Inputs e botão de busca */
-body input[type="search"] {
-  padding: 8px 12px;
-  border: 2px solid #BD3623;
-  border-radius: 5px;
-  width: 70%;
-  max-width: 400px;
-  margin-right: 10px;
-}
-
-body button {
-  padding: 8px 15px;
-  background-color: #BD3623;
-  color: #FFD882;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-body button:hover {
-  background-color: #B29047;
 }
 
 .paragrafoCardapio h2 {
-  color: #BD3623;
+  color: var(--cor-primaria);
 }
-/* --- Pagina --- */
 
-/* Estilo para o corpo da página "O Ambiente" */
+.cardapio-intro {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.cardapio-banner {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.cardapio-nav {
+  background-color: var(--cor-fundo-suave);
+  padding: 30px;
+  border-radius: 10px;
+  margin: 30px auto;
+  max-width: 800px;
+}
+
+.cardapio-nav h2 {
+  margin-bottom: 20px;
+}
+
+.cardapio-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.cardapio-nav a {
+  background-color: var(--cor-primaria);
+  color: var(--cor-secundaria);
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color var(--transicao-padrao);
+}
+
+.cardapio-nav a:hover {
+  background-color: #b29047;
+}
+
+.busca-container,
+#search {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: var(--cor-fundo-claro);
+}
+
+.site-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.site-search label {
+  font-weight: bold;
+  color: var(--cor-texto-principal);
+}
+
+.categoria-menu {
+  padding: 40px 20px;
+  margin: 40px auto;
+}
+
+.categoria-menu h2 {
+  color: var(--cor-primaria);
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.categoria-imagem {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  border-radius: 10px;
+  box-shadow: var(--sombra-leve);
+}
+
+.menu-lista {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.menu-item {
+  background-color: var(--cor-fundo-claro);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--sombra-leve);
+  transition: transform var(--transicao-padrao), box-shadow var(--transicao-padrao);
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--sombra-media);
+}
+
+.item-nome {
+  color: var(--cor-primaria);
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.item-preco {
+  color: #b29047;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.item-ingredientes {
+  color: var(--cor-texto-principal);
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+/* --- Página Ambiente --- */
 #page-ambiente {
-    padding-top: 100px; /* Garante que o conteúdo comece abaixo do cabeçalho fixo */
+  padding-top: 100px;
 }
 
-/* Container principal para a galeria */
 .ambiente-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Seção do ambiente */
 .ambiente-secao {
-    text-align: center;
-    color: #bd3623;
-    padding: 20px;
+  text-align: center;
+  padding: 20px;
 }
 
-/* Título da seção */
 .ambiente-secao__titulo {
-    color: var(--cor-vtexto-principal);
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    border-bottom: 3px solid var(--cor-secundaria);
-    padding-bottom: 10px;
-    display: inline-block;
+  color: var(--cor-primaria);
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  border-bottom: 3px solid var(--cor-secundaria);
+  padding-bottom: 10px;
+  display: inline-block;
 }
 
-/* Galeria de imagens */
+.ambiente-secao__descricao {
+  font-size: 1.2em;
+  color: var(--cor-texto-principal);
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.8;
+}
+
 .ambiente-galeria {
-    display: grid;
-    /* Grid responsivo: cada imagem tenta ocupar um espaço de 300px,
-       e o grid se ajusta para o número de colunas ideal */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
-/* Estilo para cada imagem */
 .ambiente-galeria img {
-    width: 100%;
-    height: 250px; /* Altura fixa para alinhar as imagens */
-    object-fit: cover; /* Recorta a imagem para preencher o espaço sem distorcer */
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    border: 3px solid var(--cor-secundaria); /* Borda com a cor amarela */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: var(--sombra-media);
+  border: 3px solid var(--cor-secundaria);
+  transition: transform var(--transicao-padrao), box-shadow var(--transicao-padrao);
 }
 
-/* Efeito ao passar o mouse */
 .ambiente-galeria img:hover {
-    transform: scale(1.05); /* Aumenta a imagem ligeiramente */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
-    border-color: var(--cor-primaria); /* Muda a cor da borda no hover */
+  transform: scale(1.05);
+  box-shadow: var(--sombra-densa);
+  border-color: var(--cor-primaria);
 }
 
-/*==============================/
-/======= Página Contato =======/
-/==============================*/
-
+/* --- Página Contato --- */
 .contato-container {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 40px 50px;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-color:  #FFF5D1
+  padding: 40px 20px;
+  background-color: var(--cor-fundo-suave);
+  min-height: calc(100vh - 91px);
 }
 
 .contato-box {
   padding: 30px;
+  width: 100%;
+  max-width: 700px;
 }
 
 .contato-container h2 {
-  color: #BD3623;
+  color: var(--cor-primaria);
+  margin-bottom: 20px;
 }
 
 .contato-card {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.95);
   padding: 40px;
   border-radius: 12px;
   box-shadow: var(--sombra-leve);
-  max-width: 700px;
-  width: 100%;
 }
 
+.contato-info {
+  list-style: none;
+  padding: 20px 0;
+}
 
-/*==============================/
-/========== Rodapé ============/
-/==============================*/
+.contato-info li {
+  margin: 15px 0;
+  font-size: 1.1em;
+}
+
+/* --- Cesta de Compras --- */
+.carrinho-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.carrinho-lista {
+  list-style: none;
+}
+
+.carrinho-item {
+  background-color: var(--cor-fundo-claro);
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: var(--sombra-leve);
+}
+
+.carrinho-item h3 {
+  color: var(--cor-primaria);
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.resumo-pedido {
+  background-color: var(--cor-fundo-suave);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.resumo-pedido .total {
+  font-size: 1.5em;
+  color: var(--cor-primaria);
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid var(--cor-primaria);
+}
+
+.form-entrega {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: var(--cor-fundo-claro);
+  border-radius: 10px;
+  box-shadow: var(--sombra-leve);
+}
+
+/* ========================================
+   6. FOOTER
+======================================== */
 footer {
-  background-color: #BD3623;
-  color: #FFD882;
-  padding: 30px 20px;
-  text-align: left;
-  width: 100%
+  background-color: var(--cor-primaria);
+  color: var(--cor-secundaria);
+  padding: 40px 20px 20px;
+  width: 100%;
+  margin-top: auto;
 }
 
-footer h3 {
-  margin-bottom: 10px;
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 20px;
+}
+
+.footer-section {
+  padding: 10px;
+}
+
+footer h3,
+footer h4 {
+  margin-bottom: 15px;
+  color: var(--cor-secundaria);
 }
 
 footer p {
@@ -612,12 +763,127 @@ footer p {
 }
 
 footer a {
-  color: #FFD882;
-  text-decoration: none;
-  margin: 0 10px;
-  transition: color 0.3s;
+  color: var(--cor-secundaria);
+  transition: color var(--transicao-padrao);
 }
 
 footer a:hover {
-  color: #B29047;
+  color: #b29047;
+}
+
+.footer-copyright {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid var(--cor-secundaria);
+  margin-top: 20px;
+}
+
+/* ========================================
+   7. MEDIA QUERIES - RESPONSIVIDADE
+======================================== */
+@media (max-width: 1024px) {
+  .main-header ul,
+  .main-nav__list {
+    gap: 15px;
+  }
+
+  .main-header ul a,
+  .main-nav__link {
+    padding: 6px 10px;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 140px;
+  }
+
+  .main-header {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .main-header ul,
+  .main-nav__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .hero h2,
+  .destaque h2,
+  .cta h2 {
+    font-size: 2em;
+  }
+
+  .sn-secao {
+    padding: 40px 15px;
+  }
+
+  .sn-secao__titulo {
+    font-size: 2em;
+  }
+
+  .sn-historia__figura {
+    float: none;
+    margin: 20px auto;
+  }
+
+  .sn-equipe__figuras-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sn-figura__imagem--equipe {
+    max-width: 100%;
+  }
+
+  .cardapio-nav ul {
+    flex-direction: column;
+  }
+
+  .menu-lista {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .estrelas {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-header h1 {
+    font-size: 1.5em;
+  }
+
+  .hero h2,
+  .destaque h2 {
+    font-size: 1.5em;
+  }
+
+  .sn-secao__titulo {
+    font-size: 1.7em;
+  }
+
+  .sn-secao__paragrafo {
+    font-size: 1em;
+  }
+
+  .form-card {
+    padding: 25px;
+  }
+
+  .estrelas {
+    font-size: 2em;
+  }
+
+  .ambiente-galeria {
+    grid-template-columns: 1fr;
+  }
 }
