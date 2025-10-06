@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Finalize seu pedido na DevPizza">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Cesta de Compras - DevPizza</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>DevPizza</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="ambiente.html">O Ambiente</a></li>
+                <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="avaliacao.html">Avaliações</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Cesta de Compras</h1>
+        <p>Revise seu pedido antes de finalizar a compra.</p>
+
+        <!-- Lista de itens do carrinho -->
+        <section id="itens-carrinho" class="carrinho-container">
+            <h2>Itens Selecionados</h2>
+            <ul class="carrinho-lista">
+                <li class="carrinho-item">
+                    <article>
+                        <h3>Pizza Portuguesa</h3>
+                        <p><strong>Tamanho:</strong> Grande</p>
+                        <p><strong>Preço:</strong> R$ 40,00</p>
+
+                        <div class="form-group">
+                            <label for="meio-portuguesa">Meio a Meio:</label>
+                            <select id="meio-portuguesa" name="meio-portuguesa">
+                                <option value="">Nenhum</option>
+                                <option value="calabresa">Calabresa</option>
+                                <option value="margherita">Margherita</option>
+                                <option value="frango-catupiry">Frango com Catupiry</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="qtd-portuguesa">Quantidade:</label>
+                            <input
+                                type="number"
+                                id="qtd-portuguesa"
+                                name="qtd-portuguesa"
+                                min="1"
+                                value="1"
+                            >
+                        </div>
+                    </article>
+                </li>
+
+                <li class="carrinho-item">
+                    <article>
+                        <h3>Pizza Calabresa</h3>
+                        <p><strong>Tamanho:</strong> Média</p>
+                        <p><strong>Preço:</strong> R$ 32,00</p>
+
+                        <div class="form-group">
+                            <label for="meio-calabresa">Meio a Meio:</label>
+                            <select id="meio-calabresa" name="meio-calabresa">
+                                <option value="">Nenhum</option>
+                                <option value="portuguesa">Portuguesa</option>
+                                <option value="margherita">Margherita</option>
+                                <option value="frango-catupiry">Frango com Catupiry</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="qtd-calabresa">Quantidade:</label>
+                            <input
+                                type="number"
+                                id="qtd-calabresa"
+                                name="qtd-calabresa"
+                                min="1"
+                                value="2"
+                            >
+                        </div>
+                    </article>
+                </li>
+
+                <li class="carrinho-item">
+                    <article>
+                        <h3>Refrigerante 2L</h3>
+                        <p><strong>Preço:</strong> R$ 12,00</p>
+
+                        <div class="form-group">
+                            <label for="qtd-refri">Quantidade:</label>
+                            <input
+                                type="number"
+                                id="qtd-refri"
+                                name="qtd-refri"
+                                min="1"
+                                value="1"
+                            >
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Resumo do pedido -->
+        <aside id="resumo" class="resumo-pedido">
+            <h2>Resumo do Pedido</h2>
+            <p><strong>Subtotal:</strong> R$ 116,00</p>
+            <p><strong>Taxa de entrega:</strong> R$ 8,00</p>
+            <p class="total"><strong>Total:</strong> R$ 124,00</p>
+        </aside>
+
+        <!-- Formulário de entrega -->
+        <section id="dados-cliente" class="form-entrega">
+            <h2>Dados para Entrega</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input 
+                        type="text" 
+                        id="nome" 
+                        name="nome" 
+                        required 
+                        placeholder="Seu nome completo"
+                        autocomplete="name"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="endereco">Endereço completo:</label>
+                    <input
+                        type="text"
+                        id="endereco"
+                        name="endereco"
+                        required
+                        placeholder="Rua, número, complemento, bairro, CEP"
+                        autocomplete="street-address"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        required
+                        placeholder="(11) 99999-9999"
+                        pattern="[\(]?[0-9]{2}[\)]?\s?[0-9]{4,5}[-]?[0-9]{4}"
+                        autocomplete="tel"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="pagamento">Forma de Pagamento:</label>
+                    <select id="pagamento" name="pagamento" required>
+                        <option value="">Selecione...</option>
+                        <option value="dinheiro">Dinheiro</option>
+                        <option value="cartao-debito">Cartão de Débito</option>
+                        <option value="cartao-credito">Cartão de Crédito</option>
+                        <option value="pix">PIX</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-primary">Finalizar Pedido</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>DevPizza</h3>
+                <p>🍕 A melhor pizza da cidade desde 1995</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>Telefone: (11) 99999-9999</p>
+                <a href="contato.html">Entre em Contato</a>
+            </div>
+
+            <address class="footer-section">
+                <h4>Endereço</h4>
+                <p>Rua das Pizzas, 123 - São Paulo, SP</p>
+            </address>
+
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <a href="https://facebook.com/devpizza" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://instagram.com/devpizza" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+        </div>
+
+        <p class="footer-copyright">&copy; 2025 DevPizza - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,82 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login do Cliente</title>
-    <link rel="stylesheet" href="../css/styles.css"  />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Faça login na sua conta DevPizza">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Login - DevPizza</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
     <header class="main-header">
-      <h1>DevPizza</h1>
-      <div>
+        <h1>DevPizza</h1>
         <nav>
-          <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="ambiente.html">O Ambiente</a></li>
-            <li><a href="sobre-nos.html">Sobre Nós</a></li>
-            <li><a href="cardapio.html">Cardapio</a></li>
-            <li><a href="avaliação.html">Avaliações</a></li>
-            <li><a href="contato.html">Contato</a></li>
-            <li><a href="login.html">Login</a></li>
-          </ul>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="ambiente.html">O Ambiente</a></li>
+                <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="avaliacao.html">Avaliações</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="login.html" class="active">Login</a></li>
+            </ul>
         </nav>
-      </div>
     </header>
+
     <main>
-      <section class="login">
-        <h2>Login</h2>
-        <section class="form-container">
-          <div class="form-card">
-            <form action="logar" method="post">
-              
-                <label for="email_usuario">E-mail:</label>
-                <input
-                  type="email"
-                  id="email_usuario"
-                  name="email"
-                  placeholder="seuemail@exemplo.com.br"
-                  required
-                /><br />
-                
-                <label for="senha_usuario">Senha:</label>
-                <input
-                  type="password"
-                  id="senha_usuario"
-                  name="senha"
-                  placeholder="Sua senha"
-                  required
-                /><br />
-                <button type="submit">Entrar</button>
-            </form>
-          </div>
+        <section class="login">
+            <h2>Login</h2>
+            <div class="form-container">
+                <div class="form-card">
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="email">E-mail:</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                                placeholder="seuemail@exemplo.com"
+                                autocomplete="email"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="senha">Senha:</label>
+                            <input
+                                type="password"
+                                id="senha"
+                                name="senha"
+                                required
+                                placeholder="Sua senha"
+                                autocomplete="current-password"
+                            >
+                        </div>
+
+                        <button type="submit" class="btn-primary">Entrar</button>
+                    </form>
+                </div>
+            </div>
+
+            <p class="form-link">
+                <a href="cadastro.html">Não tem uma conta? Cadastre-se aqui.</a>
+            </p>
         </section>
-      </section>
-      <p id="entrarCadastro"><a href="cadastro.html">Não tem uma conta? Cadastre-se aqui.</a></p>
     </main>
+
     <footer>
-      <div>
-        <h3>DevPizza</h3>
-        <p>🍕 A melhor pizza da cidade desde 1995</p>
-      </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>DevPizza</h3>
+                <p>🍕 A melhor pizza da cidade desde 1995</p>
+            </div>
 
-      <div>
-        <h4>Contato</h4>
-        <a href="contato.html">Entre em Contato</a>
-      </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>Telefone: (11) 99999-9999</p>
+                <a href="contato.html">Entre em Contato</a>
+            </div>
 
-      <address>
-        <h4>Endereço</h4>
-        <p>Rua das Pizzas, 123 - São Paulo, SP</p>
-      </address>
+            <address class="footer-section">
+                <h4>Endereço</h4>
+                <p>Rua das Pizzas, 123 - São Paulo, SP</p>
+            </address>
 
-      <div>
-        <h4>Redes Sociais</h4>
-        <a href="#">Facebook</a> | <a href="#">Instagram</a> |
-        <a href="#">WhatsApp</a>
-      </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <a href="https://facebook.com/devpizza" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://instagram.com/devpizza" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+        </div>
 
-      <p>&copy; 2025 DevPizza - Todos os direitos reservados.</p>
+        <p class="footer-copyright">&copy; 2025 DevPizza - Todos os direitos reservados.</p>
     </footer>
-  </body>
+</body>
 </html>

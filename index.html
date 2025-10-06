@@ -1,87 +1,102 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DevPizza</title>
-    <link rel="stylesheet" href="css/styles.css"  />
-  </head>
-  <body>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DevPizza - A melhor pizza artesanal de São Paulo desde 1995. Pizzas napolitanas com ingredientes frescos e forno a lenha.">
+    <meta name="keywords" content="pizza, pizzaria, são paulo, delivery, pizza artesanal, forno a lenha">
+    <meta name="author" content="DevPizza">
+    <title>DevPizza - A Melhor Pizza de São Paulo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
     <header class="main-header">
-      <h1>DevPizza</h1>
-      <div>
+        <h1>DevPizza</h1>
         <nav>
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="pages/ambiente.html">O Ambiente</a></li>
-            <li><a href="pages/sobre-nos.html">Sobre Nós</a></li>
-            <li><a href="pages/cardapio.html">Cardapio</a></li>
-            <li><a href="pages/avaliação.html">Avaliações</a></li>
-            <li><a href="pages/contato.html">Contato</a></li>
-            <li><a href="pages/login.html">Login</a></li>
-          </ul>
+            <ul>
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="pages/ambiente.html">O Ambiente</a></li>
+                <li><a href="pages/sobre-nos.html">Sobre Nós</a></li>
+                <li><a href="pages/cardapio.html">Cardápio</a></li>
+                <li><a href="pages/avaliacao.html">Avaliações</a></li>
+                <li><a href="pages/contato.html">Contato</a></li>
+                <li><a href="pages/login.html">Login</a></li>
+            </ul>
         </nav>
-      </div>
     </header>
+
     <main>
-      <section class="paragrafoIndex">
-          <h2>Sabor que Conecta, Massa que Surpreende</h2>
-          <p>
-            Descubra a autêntica pizza napolitana com um toque de inovação. Na
-            DevPizza, usamos apenas os melhores ingredientes para criar sabores
-            inesquecíveis, assados em forno a lenha para uma crocância perfeita.
-            Convidamos você a embarcar nessa experiência gastronômica única.
-          </p>
-          <img src="img/ambiente02.webp" alt="Foto da área principal da pizzaria, tem cadeiras alinhadas a um balcão e uma luz quente aconchegante" />
+        <section class="hero">
+            <h2>Sabor que Conecta, Massa que Surpreende</h2>
+            <p>
+                Descubra a autêntica pizza napolitana com um toque de inovação. Na
+                DevPizza, usamos apenas os melhores ingredientes para criar sabores
+                inesquecíveis, assados em forno a lenha para uma crocância perfeita.
+                Convidamos você a embarcar nessa experiência gastronômica única.
+            </p>
+            <img 
+                src="img/ambiente02.webp" 
+                alt="Área principal da pizzaria com cadeiras alinhadas a um balcão e iluminação aconchegante" 
+                loading="lazy"
+            >
+        </section>
 
-        <hr />
-          <h2>Pizza do Mês: A Desejada Margherita Trufada</h2>
-          <p>
-            Nossa clássica Margherita, elevada a outro nível. Molho de tomate San
-            Marzano, queijo burrata cremoso, manjericão fresco e um toque final de
-            azeite trufado. Uma combinação perfeita de tradição e sofisticação que
-            vai te deixar com água na boca. Venha experimentar!
-          </p>
-          <img
-            src="img/pizza-366111_640.jpg"
-            alt="Pizza de burrata com azeite trufado sendo feita por um pizzaiolo"
-            width= 50%
-            height= 100px
-          />
+        <hr>
 
-        <hr />
-          <h2>Peça Já a Sua!</h2>
-          <p>
-            Não perca tempo! Navegue pelo nosso cardápio completo e faça seu
-            pedido online. Entregamos o sabor da DevPizza quentinho na sua casa.
-          </p>
-          <a href="pages/cardapio.html">Ver Cardápio Completo</a>
-      </section>
+        <section class="destaque">
+            <h2>Pizza do Mês: A Desejada Margherita Trufada</h2>
+            <p>
+                Nossa clássica Margherita, elevada a outro nível. Molho de tomate San
+                Marzano, queijo burrata cremoso, manjericão fresco e um toque final de
+                azeite trufado. Uma combinação perfeita de tradição e sofisticação que
+                vai te deixar com água na boca. Venha experimentar!
+            </p>
+            <img
+                src="img/pizza-366111_640.jpg"
+                alt="Pizza de burrata com azeite trufado sendo preparada por um pizzaiolo"
+                loading="lazy"
+            >
+        </section>
+
+        <hr>
+
+        <section class="cta">
+            <h2>Peça Já a Sua!</h2>
+            <p>
+                Não perca tempo! Navegue pelo nosso cardápio completo e faça seu
+                pedido online. Entregamos o sabor da DevPizza quentinho na sua casa.
+            </p>
+            <a href="pages/cardapio.html" class="btn-primary">Ver Cardápio Completo</a>
+        </section>
     </main>
+
     <footer>
-      <div>
-        <h3>DevPizza</h3>
-        <p>🍕 A melhor pizza da cidade desde 1995</p>
-      </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>DevPizza</h3>
+                <p>🍕 A melhor pizza da cidade desde 1995</p>
+            </div>
 
-      <div>
-        <h4>Contato</h4>
-        <a href="pages/contato.html">Entre em Contato</a>
-      </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>Telefone: (11) 99999-9999</p>
+                <a href="pages/contato.html">Entre em Contato</a>
+            </div>
 
-      <div>
-        <h4>Endereço</h4>
-        <p>Rua das Pizzas, 123 - São Paulo, SP</p>
-      </div>
+            <address class="footer-section">
+                <h4>Endereço</h4>
+                <p>Rua das Pizzas, 123 - São Paulo, SP</p>
+            </address>
 
-      <div>
-        <h4>Redes Sociais</h4>
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
-        <a href="#">WhatsApp</a>
-      </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <a href="https://facebook.com/devpizza" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://instagram.com/devpizza" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+        </div>
 
-      <p>&copy; 2025 DevPizza - Todos os direitos reservados.</p>
+        <p class="footer-copyright">&copy; 2025 DevPizza - Todos os direitos reservados.</p>
     </footer>
-  </body>
+</body>
 </html>

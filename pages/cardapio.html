@@ -1,510 +1,626 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cardápio</title>
-    <link rel="stylesheet" href="../css/styles.css" />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cardápio completo da DevPizza - Pizzas salgadas, pizzas doces, esfihas, lanches e bebidas">
+    <meta name="keywords" content="cardápio pizza, menu pizzaria, pizzas salgadas, pizzas doces, esfihas, delivery">
+    <title>Cardápio - DevPizza</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
     <header class="main-header">
-      <h1>DevPizza</h1>
-      <div>
+        <h1>DevPizza</h1>
         <nav>
-          <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="ambiente.html">O Ambiente</a></li>
-            <li><a href="sobre-nos.html">Sobre Nós</a></li>
-            <li><a href="cardapio.html">Cardapio</a></li>
-            <li><a href="avaliação.html">Avaliações</a></li>
-            <li><a href="contato.html">Contato</a></li>
-            <li><a href="login.html">Login</a></li>
-          </ul>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="ambiente.html">O Ambiente</a></li>
+                <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                <li><a href="cardapio.html" class="active">Cardápio</a></li>
+                <li><a href="avaliacao.html">Avaliações</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
         </nav>
-      </div>
     </header>
+
     <main>
-      <section class="paragrafoCardapio">
-        <section id="introducao">
-          <h2>Cardápio:</h2>
-          <img
-            src="../img/cardapio_cardapio.jpg"
-            type="jpeg"
-            width="100%"
-            height="200"
-          />
-          <br />
-          <a href="#pizzas-salgadas">Pizzas salgadas</a>
-          <br />
-          <a href="#pizzas-doces">Pizzas doces</a>
-          <br />
-          <a href="#esfihas">Esfihas</a>
-          <br />
-          <a href="#lanches">Lanches</a>
-          <br />
-          <a href="#bebidas">Bebidas</a>
+        <section class="paragrafoCardapio">
+            <section id="introducao" class="cardapio-intro">
+                <h1>Nosso Cardápio</h1>
+                <img
+                    src="../img/cardapio_cardapio.jpg"
+                    alt="Banner do cardápio DevPizza"
+                    loading="lazy"
+                    class="cardapio-banner"
+                >
+
+                <nav class="cardapio-nav" aria-label="Navegação do cardápio">
+                    <h2>Navegue pelo Cardápio:</h2>
+                    <ul>
+                        <li><a href="#pizzas-salgadas">Pizzas Salgadas</a></li>
+                        <li><a href="#pizzas-doces">Pizzas Doces</a></li>
+                        <li><a href="#esfihas">Esfihas</a></li>
+                        <li><a href="#lanches">Lanches</a></li>
+                        <li><a href="#bebidas">Bebidas</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section id="search" class="busca-container">
+                <form class="site-search" role="search" aria-label="Buscar no cardápio">
+                    <label for="busca">Buscar sabores, bebidas, lanches:</label>
+                    <input
+                        id="busca"
+                        name="busca"
+                        type="search"
+                        placeholder="Ex.: Portuguesa, Refrigerante..."
+                        autocomplete="off"
+                    >
+                    <button type="submit">Buscar</button>
+                </form>
+            </section>
+
+            <!-- Pizzas Salgadas -->
+            <section id="pizzas-salgadas" class="categoria-menu">
+                <h2>Pizzas Salgadas</h2>
+                <img
+                    src="../img/cardapio_pizzas_salgadas.png"
+                    alt="Variedade de pizzas salgadas da DevPizza"
+                    class="categoria-imagem"
+                    loading="lazy"
+                >
+
+                <ul class="menu-lista">
+                    <li class="menu-item">
+                        <h3 class="item-nome">Calabresa</h3>
+                        <p class="item-preco">R$ 30,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> queijo mussarela, calabresa, cebola, orégano.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Frango com Catupiry</h3>
+                        <p class="item-preco">R$ 35,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> queijo mussarela, frango desfiado, catupiry, orégano.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Portuguesa</h3>
+                        <p class="item-preco">R$ 40,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> mussarela, presunto, ovo cozido, cebola, azeitona, orégano.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Margherita</h3>
+                        <p class="item-preco">R$ 25,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> mussarela, tomate fatiado, manjericão.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Bacon</h3>
+                        <p class="item-preco">R$ 50,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> bacon, mussarela, molho de tomate, orégano, catupiry.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Palmito</h3>
+                        <p class="item-preco">R$ 48,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> palmito, mussarela, molho de tomate, orégano.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Carne Seca com Catupiry</h3>
+                        <p class="item-preco">R$ 55,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> carne seca, catupiry, mussarela, cebola roxa.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Camarão</h3>
+                        <p class="item-preco">R$ 65,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> camarão, catupiry, mussarela, molho de tomate.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Baiana</h3>
+                        <p class="item-preco">R$ 58,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> calabresa, pimenta dedo-de-moça, cebola, pimentão, ovos cozidos, mussarela, molho de tomate.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Mineira</h3>
+                        <p class="item-preco">R$ 55,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> linguiça calabresa, couve refogada, mussarela, bacon.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Pepperoni</h3>
+                        <p class="item-preco">R$ 55,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> pepperoni, mussarela, molho de tomate, orégano.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Romana</h3>
+                        <p class="item-preco">R$ 55,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> anchovas, mussarela, azeitona preta, molho de tomate.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Corinthiana</h3>
+                        <p class="item-preco">R$ 55,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> frango desfiado, cebola, azeitona preta, mussarela, pimenta.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Palmeirense</h3>
+                        <p class="item-preco">R$ 58,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> lombo de porco, brócolis, palmito, orégano, mussarela, alho frito.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">São Paulina</h3>
+                        <p class="item-preco">R$ 60,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> presunto, calabresa, mussarela, rúcula, pimenta, alho frito.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Pizzas Doces -->
+            <section id="pizzas-doces" class="categoria-menu">
+                <h2>Pizzas Doces</h2>
+                <img
+                    src="../img/cardapio_pizzas_doces.png"
+                    alt="Seleção de pizzas doces da DevPizza"
+                    class="categoria-imagem"
+                    loading="lazy"
+                >
+
+                <ul class="menu-lista">
+                    <li class="menu-item">
+                        <h3 class="item-nome">Chocolate ao Leite</h3>
+                        <p class="item-preco">R$ 30,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> chocolate ao leite, mussarela, granulado.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Prestígio</h3>
+                        <p class="item-preco">R$ 35,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> chocolate ao leite, coco ralado, mussarela.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Romeu e Julieta</h3>
+                        <p class="item-preco">R$ 32,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> goiabada, queijo mussarela.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Chocolate Branco com Morango</h3>
+                        <p class="item-preco">R$ 38,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> chocolate branco, morango, mussarela.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Banana com Canela</h3>
+                        <p class="item-preco">R$ 28,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> banana fatiada, açúcar, canela, mussarela.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Doce de Leite com Coco</h3>
+                        <p class="item-preco">R$ 36,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> doce de leite, coco ralado, mussarela.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Chocolate com Avelã</h3>
+                        <p class="item-preco">R$ 40,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> chocolate ao leite, creme de avelã, mussarela.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Morango com Nutella</h3>
+                        <p class="item-preco">R$ 42,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> morango, Nutella, mussarela.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Maçã com Canela</h3>
+                        <p class="item-preco">R$ 30,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> maçã fatiada, açúcar, canela, mussarela.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Chocolate Meio Amargo</h3>
+                        <p class="item-preco">R$ 35,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> chocolate meio amargo, mussarela, raspas de chocolate.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Doce de Leite com Banana</h3>
+                        <p class="item-preco">R$ 33,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> doce de leite, banana fatiada, mussarela.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Brigadeiro</h3>
+                        <p class="item-preco">R$ 28,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> brigadeiro, granulado, mussarela.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Chocolate com Morango e Chantilly</h3>
+                        <p class="item-preco">R$ 45,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> chocolate ao leite, morango, chantilly, mussarela.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Limão Siciliano</h3>
+                        <p class="item-preco">R$ 38,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> creme de limão, raspas de limão, mussarela.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Oreo</h3>
+                        <p class="item-preco">R$ 40,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> creme de chocolate, biscoito Oreo triturado, mussarela.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Esfihas -->
+            <section id="esfihas" class="categoria-menu">
+                <h2>Esfihas</h2>
+                <img
+                    src="../img/cardapio_esfihas.jpg"
+                    alt="Variedade de esfihas assadas da DevPizza"
+                    class="categoria-imagem"
+                    loading="lazy"
+                >
+
+                <ul class="menu-lista">
+                    <li class="menu-item">
+                        <h3 class="item-nome">Esfiha de Carne</h3>
+                        <p class="item-preco">R$ 6,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> carne moída temperada, cebola, tomate, especiarias.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Esfiha de Queijo</h3>
+                        <p class="item-preco">R$ 6,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> queijo mussarela derretido.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Esfiha de Frango com Catupiry</h3>
+                        <p class="item-preco">R$ 7,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> frango desfiado, catupiry, temperos.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Esfiha de Calabresa</h3>
+                        <p class="item-preco">R$ 6,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> calabresa moída, cebola, mussarela.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Esfiha de Escarola com Queijo</h3>
+                        <p class="item-preco">R$ 7,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> escarola refogada, queijo mussarela.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Esfiha de Atum</h3>
+                        <p class="item-preco">R$ 7,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> atum, cebola, temperos.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Esfiha de Quatro Queijos</h3>
+                        <p class="item-preco">R$ 8,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> mussarela, parmesão, provolone, catupiry.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Esfiha de Pernil</h3>
+                        <p class="item-preco">R$ 7,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> pernil desfiado, cebola, molho especial.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Esfiha de Milho com Catupiry</h3>
+                        <p class="item-preco">R$ 7,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> milho, catupiry.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Esfiha de Presunto e Queijo</h3>
+                        <p class="item-preco">R$ 6,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> presunto, queijo mussarela.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Esfiha de Frango com Milho</h3>
+                        <p class="item-preco">R$ 8,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> frango, milho.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Esfiha de Carne Seca com Requeijão</h3>
+                        <p class="item-preco">R$ 8,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> carne seca desfiada, requeijão cremoso.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Lanches -->
+            <section id="lanches" class="categoria-menu">
+                <h2>Lanches</h2>
+                <img
+                    src="../img/cardapio_lanches.jpg"
+                    alt="Seleção de lanches da DevPizza"
+                    class="categoria-imagem"
+                    loading="lazy"
+                >
+
+                <ul class="menu-lista">
+                    <li class="menu-item">
+                        <h3 class="item-nome">Kibe</h3>
+                        <p class="item-preco">R$ 8,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> trigo para kibe, carne moída, hortelã, cebola, temperos.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Beirute</h3>
+                        <p class="item-preco">R$ 25,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> pão sírio, filé de frango ou rosbife, queijo, presunto, alface, tomate, maionese.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Fogazza</h3>
+                        <p class="item-preco">R$ 10,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> massa frita, recheio de queijo ou carne, temperos.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Coxinha</h3>
+                        <p class="item-preco">R$ 7,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> massa de batata, frango desfiado, requeijão, temperos.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Empada</h3>
+                        <p class="item-preco">R$ 6,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> massa amanteigada, recheio de frango, queijo ou palmito.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Bebidas -->
+            <section id="bebidas" class="categoria-menu">
+                <h2>Bebidas</h2>
+                <img
+                    src="../img/cardapio_bebidas.jpg"
+                    alt="Variedade de bebidas disponíveis"
+                    class="categoria-imagem"
+                    loading="lazy"
+                >
+
+                <ul class="menu-lista">
+                    <li class="menu-item">
+                        <h3 class="item-nome">Refrigerante Lata</h3>
+                        <p class="item-preco">R$ 6,00</p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Refrigerante 2L</h3>
+                        <p class="item-preco">R$ 15,00</p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Suco Natural de Laranja</h3>
+                        <p class="item-preco">R$ 10,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> laranja fresca espremida.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Suco Natural de Abacaxi</h3>
+                        <p class="item-preco">R$ 10,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> abacaxi fresco, água, açúcar (opcional).
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Suco Natural de Maracujá</h3>
+                        <p class="item-preco">R$ 10,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> maracujá fresco, água, açúcar (opcional).
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Água Mineral</h3>
+                        <p class="item-preco">R$ 4,00</p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Água com Gás</h3>
+                        <p class="item-preco">R$ 5,00</p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Cerveja Lata</h3>
+                        <p class="item-preco">R$ 8,00</p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Cerveja Long Neck</h3>
+                        <p class="item-preco">R$ 12,00</p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Vinho Tinto Taça</h3>
+                        <p class="item-preco">R$ 18,00</p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Vinho Branco Taça</h3>
+                        <p class="item-preco">R$ 18,00</p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Caipirinha</h3>
+                        <p class="item-preco">R$ 20,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> cachaça, limão, açúcar, gelo.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Caipiroska</h3>
+                        <p class="item-preco">R$ 22,00</p>
+                        <p class="item-ingredientes">
+                            <strong>Ingredientes:</strong> vodka, limão, açúcar, gelo.
+                        </p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Chá Gelado</h3>
+                        <p class="item-preco">R$ 8,00</p>
+                    </li>
+
+                    <li class="menu-item">
+                        <h3 class="item-nome">Café Expresso</h3>
+                        <p class="item-preco">R$ 6,00</p>
+                    </li>
+                </ul>
+            </section>
         </section>
-        <canvas id="meuCanvas" width="500" height="300"></canvas>
-        <section id="search">
-          <form
-            class="site-search"
-            role="search"
-            aria-label="Buscar no cardápio"
-          >
-            <label for="busca">Buscar sabores, bebidas,lanches etc.</label>
-            <input
-              id="busca"
-              name="q"
-              type="search"
-              placeholder="Ex.: Portuguesa, Refrigerante…"
-              autocomplete="off"
-            />
-            <button type="submit">Buscar</button>
-          </form>
-        </section>
-        <!--Pizzas salgadas-->
-        <section id="pizzas-salgadas">
-          <h2>Pizzas salgadas:</h2>
-          <br />
-          <img
-            src="../img/cardapio_pizzas_salgadas.png"
-            width="100%"
-            height="370"
-          />
-          <ul>
-            <li>
-              <h3>Calabresa - R$30,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> queijo mussarela; calabresa;
-                cebola; orégano.
-              </p>
-            </li>
-            <li>
-              <h3>Frango com Catupiry - R$35,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> queijo mussarela; frango
-                desfiado; catupiry; orégano.
-              </p>
-            </li>
-            <li>
-              <h3>Portuguesa - R$40,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> mussarela; presunto; ovo cozido;
-                cebola; azeitona; orégano.
-              </p>
-            </li>
-            <li>
-              <h3>Marguerita - R$25,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> mussarela; tomate fatiado;
-                manjericão.
-              </p>
-            </li>
-            <li>
-              <h3>Bacon - R$50,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> bacon; mussarela; molho de
-                tomate; orégano; catupiry; mussarela.
-              </p>
-            </li>
-            <li>
-              <h3>Palmito - R$48,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> palmito; mussarela; molho de
-                tomate; orégano.
-              </p>
-            </li>
-            <li>
-              <h3>Carne Seca com Catupiry - R$55,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> carne seca; catupiry; mussarela;
-                cebola roxa.
-              </p>
-            </li>
-            <li>
-              <h3>Camarão - R$65,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> camarão; catupiry; mussarela;
-                molho de tomate.
-              </p>
-            </li>
-            <li>
-              <h3>Baiana - R$58,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> calabresa; pimenta dedo-de-moça;
-                cebola; pimentão; ovos cozidos; mussarela; molho de tomate.
-              </p>
-            </li>
-            <li>
-              <h3>Mineira - R$55,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> linguiça calabresa; couve
-                refogada; mussarela; bacon.
-              </p>
-            </li>
-            <li>
-              <h3>Pepperoni - R$55,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> pepperoni; mussarela; molho de
-                tomate; orégano.
-              </p>
-            </li>
-            <li>
-              <h3>Romana - R$55,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> aliche; mussarela; azeitona
-                preta; molho de tomate.
-              </p>
-            </li>
-            <li>
-              <h3>Corinthiana - R$55,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> frango desfiado; cebola; azeitona
-                preta; mussarela; pimenta.
-              </p>
-            </li>
-            <li>
-              <h3>Palmeirense - R$58,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> lombo de porco; brócolis;
-                palmito; orégano; mussarela; alho frito.
-              </p>
-            </li>
-            <li>
-              <h3>São Paulina - R$60,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> presunto; calabresa; mussarela;
-                rúcula; pimenta; alho frito.
-              </p>
-            </li>
-          </ul>
-        </section>
-        <!--Pizzas doces-->
-        <section id="pizzas-doces">
-          <h2>Pizzas doces:</h2>
-          <br />
-          <img
-            src="../img/cardapio_pizzas_doces.png"
-            width="100%"
-            height="370"
-          />
-          <ul>
-            <li>
-              <h3>Chocolate ao Leite - R$30,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> chocolate ao leite; mussarela;
-                granulado.
-              </p>
-            </li>
-            <li>
-              <h3>Prestígio - R$35,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> chocolate ao leite; coco ralado;
-                mussarela.
-              </p>
-            </li>
-            <li>
-              <h3>Romeu e Julieta - R$32,00</h3>
-              <p><strong>Ingredientes:</strong> goiabada; queijo mussarela.</p>
-            </li>
-            <li>
-              <h3>Chocolate Branco com Morango - R$38,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> chocolate branco; morango;
-                mussarela.
-              </p>
-            </li>
-            <li>
-              <h3>Banana com Canela - R$28,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> banana fatiada; açúcar; canela;
-                mussarela.
-              </p>
-            </li>
-            <li>
-              <h3>Doce de Leite com Coco - R$36,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> doce de leite; coco ralado;
-                mussarela.
-              </p>
-            </li>
-            <li>
-              <h3>Chocolate com Avelã - R$40,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> chocolate ao leite; creme de
-                avelã; mussarela.
-              </p>
-            </li>
-            <li>
-              <h3>Morango com Nutella - R$42,00</h3>
-              <p><strong>Ingredientes:</strong> morango; Nutella; mussarela.</p>
-            </li>
-            <li>
-              <h3>Maçã com Canela - R$30,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> maçã fatiada; açúcar; canela;
-                mussarela.
-              </p>
-            </li>
-            <li>
-              <h3>Chocolate Meio Amargo - R$35,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> chocolate meio amargo; mussarela;
-                raspas de chocolate.
-              </p>
-            </li>
-            <li>
-              <h3>Doce de Leite com Banana - R$33,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> doce de leite; banana fatiada;
-                mussarela.
-              </p>
-            </li>
-            <li>
-              <h3>Brigadeiro - R$28,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> brigadeiro; granulado; mussarela.
-              </p>
-            </li>
-            <li>
-              <h3>Chocolate com Morango e Chantilly - R$45,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> chocolate ao leite; morango;
-                chantilly; mussarela.
-              </p>
-            </li>
-            <li>
-              <h3>Limão Siciliano - R$38,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> creme de limão; raspas de limão;
-                mussarela.
-              </p>
-            </li>
-            <li>
-              <h3>Oreo - R$40,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> creme de chocolate; biscoito Oreo
-                triturado; mussarela.
-              </p>
-            </li>
-          </ul>
-        </section>     
-        <!--Lanches-->
-        <section id="esfihas">
-          <h2>Esfihas:</h2>
-          <br />
-          <img src="../img/cardapio_esfihas.jpg" width="100%" height="370" />
-          <ul>
-            <li>
-              <h3>Esfiha de Carne - R$6,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> carne moída temperada; cebola;
-                tomate; especiarias.
-              </p>
-            </li>
-            <li>
-              <h3>Esfiha de Queijo - R$6,00</h3>
-              <p><strong>Ingredientes:</strong> queijo mussarela derretido.</p>
-            </li>
-            <li>
-              <h3>Esfiha de Frango com Catupiry - R$7,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> frango desfiado; catupiry;
-                temperos.
-              </p>
-            </li>
-            <li>
-              <h3>Esfiha de Calabresa - R$6,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> calabresa moída; cebola;
-                mussarela.
-              </p>
-            </li>
-            <li>
-              <h3>Esfiha de Escarola com Queijo - R$7,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> escarola refogada; queijo
-                mussarela.
-              </p>
-            </li>
-            <li>
-              <h3>Esfiha de Atum - R$7,00</h3>
-              <p><strong>Ingredientes:</strong> atum; cebola; temperos.</p>
-            </li>
-            <li>
-              <h3>Esfiha de Quatro Queijos - R$8,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> mussarela; parmesão; provolone;
-                catupiry.
-              </p>
-            </li>
-            <li>
-              <h3>Frango com catpiry- R$7,00</h3>
-              <p><strong>Ingredientes:</strong> Frango;catupiry.</p>
-            </li>
-            <li>
-              <h3>Esfiha de Pernil - R$7,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> pernil desfiado; cebola; molho
-                especial.
-              </p>
-            </li>
-            <li>
-              <h3>Milho com catupiry- R$7,00</h3>
-              <p><strong>Ingredientes:</strong> Milho; catupiry.</p>
-            </li>
-            <li>
-              <h3>Esfiha de Presunto e Queijo - R$6,00</h3>
-              <p><strong>Ingredientes:</strong> presunto; queijo mussarela.</p>
-            </li>
-            <li>
-              <h3>Frango com milho- R$8,00</h3>
-              <p><strong>Ingredientes:</strong> Frango; milho.</p>
-            </li>
-            <li>
-              <h3>Esfiha de Carne Seca com Requeijão - R$8,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> carne seca desfiada; requeijão
-                cremoso.
-              </p>
-            </li>
-          </ul>
-        </section> 
-        <!--Lanches-->
-        <section id="lanches">
-          <h2>Lanches</h2>
-          <br />
-          <img src="../img/cardapio_lanches.jpg" width="100%" height="370" />
-          <ul>
-            <li>
-              <h3>Kibe - R$8,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> trigo para kibe; carne moída;
-                hortelã; cebola; temperos.
-              </p>
-            </li>
-            <li>
-              <h3>Beirute - R$25,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> pão sírio; filé de frango ou
-                rosbife; queijo; presunto; alface; tomate; maionese.
-              </p>
-            </li>
-            <li>
-              <h3>Fogazza - R$10,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> massa frita; recheio de queijo ou
-                carne; temperos.
-              </p>
-            </li>
-            <li>
-              <h3>Coxinha - R$7,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> massa de batata; frango desfiado;
-                requeijão; temperos.
-              </p>
-            </li>
-            <li>
-              <h3>Empada - R$6,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> massa amanteigada; recheio de
-                frango, queijo ou palmito.
-              </p>
-            </li>
-          </ul>
-        </section>
-        <!--Bebidas-->
-        <section id="bebidas">
-          <h2>Bebidas:</h2>
-          <br />
-          <img src="../img/cardapio_bebidas.jpg" width="100%" height="370" />
-          <ul>
-            <li>
-              <h3>Refrigerante Lata - R$6,00</h3>
-            </li>
-            <li>
-              <h3>Refrigerante 2L - R$15,00</h3>
-            </li>
-            <li>
-              <h3>Suco Natural de Laranja - R$10,00</h3>
-              <p><strong>Ingredientes:</strong> laranja fresca espremida.</p>
-            </li>
-            <li>
-              <h3>Suco Natural de Abacaxi - R$10,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> abacaxi fresco; água; açúcar
-                (opcional).
-              </p>
-            </li>
-            <li>
-              <h3>Suco Natural de Maracujá - R$10,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> maracujá fresco; água; açúcar
-                (opcional).
-              </p>
-            </li>
-            <li>
-              <h3>Água Mineral - R$4,00</h3>
-            </li>
-            <li>
-              <h3>Água com Gás - R$5,00</h3>
-            </li>
-            <li>
-              <h3>Cerveja Lata - R$8,00</h3>
-            </li>
-            <li>
-              <h3>Cerveja Long Neck - R$12,00</h3>
-            </li>
-            <li>
-              <h3>Vinho Tinto Taça - R$18,00</h3>
-            </li>
-            <li>
-              <h3>Vinho Branco Taça - R$18,00</h3>
-            </li>
-            <li>
-              <h3>Caipirinha - R$20,00</h3>
-              <p>
-                <strong>Ingredientes:</strong> cachaça; limão; açúcar; gelo.
-              </p>
-            </li>
-            <li>
-              <h3>Caipiroska - R$22,00</h3>
-              <p><strong>Ingredientes:</strong> vodka; limão; açúcar; gelo.</p>
-            </li>
-            <li>
-              <h3>Chá Gelado - R$8,00</h3>
-            </li>
-            <li>
-              <h3>Café Expresso - R$6,00</h3>
-            </li>
-          </ul>
-        </section>
-      </section>
     </main>
 
     <footer>
-      <div>
-        <h3>DevPizza</h3>
-        <p>🍕 A melhor pizza da cidade desde 1995</p>
-      </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>DevPizza</h3>
+                <p>🍕 A melhor pizza da cidade desde 1995</p>
+            </div>
 
-      <div>
-        <h4>Contato</h4>
-        <a href="contato.html">Entre em Contato</a>
-      </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>Telefone: (11) 99999-9999</p>
+                <a href="contato.html">Entre em Contato</a>
+            </div>
 
-      <address>
-        <h4>Endereço</h4>
-        <p>Rua das Pizzas, 123 - São Paulo, SP</p>
-      </address>
+            <address class="footer-section">
+                <h4>Endereço</h4>
+                <p>Rua das Pizzas, 123 - São Paulo, SP</p>
+            </address>
 
-      <div>
-        <h4>Redes Sociais</h4>
-        <a href="#">Facebook</a> | <a href="#">Instagram</a> |
-        <a href="#">WhatsApp</a>
-      </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <a href="https://facebook.com/devpizza" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://instagram.com/devpizza" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+        </div>
 
-      <p>&copy; 2025 DevPizza - Todos os direitos reservados.</p>
+        <p class="footer-copyright">&copy; 2025 DevPizza - Todos os direitos reservados.</p>
     </footer>
-  </body>
+</body>
 </html>
