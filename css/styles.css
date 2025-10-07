@@ -19,7 +19,7 @@
 ======================================== */
 * {
   box-sizing: border-box;
-  margin: 0;
+
   padding: 0;
 }
 
@@ -37,6 +37,7 @@ body {
   color: var(--cor-texto-principal);
   background-color: var(--cor-fundo-claro);
   line-height: 1.6;
+  margin: 0;
 }
 
 main {
@@ -404,7 +405,7 @@ body input[type="search"] {
 }
 
 .sn-valores {
-  background-color: var(--cor-secundaria);
+  background-color: var(--cor-fundo-claro);
 }
 
 .sn-valores__lista {
@@ -464,7 +465,7 @@ body input[type="search"] {
 
 .cardapio-intro {
   text-align: center;
-  padding: 40px 20px;
+  padding: 20px 20px ;
 }
 
 .cardapio-banner {
@@ -523,11 +524,6 @@ body input[type="search"] {
 .site-search label {
   font-weight: bold;
   color: var(--cor-texto-principal);
-}
-
-.categoria-menu {
-  padding: 40px 20px;
-  margin: 40px auto;
 }
 
 .categoria-menu h2 {
