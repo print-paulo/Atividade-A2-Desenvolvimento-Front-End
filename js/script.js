@@ -226,3 +226,58 @@ if (canvas) {
 // =================================================================
 // FIM: CÓDIGO DO CONSTRUTOR DE PIZZA (CANVAS) - REFORMULADO
 // =================================================================
+
+
+//busca no cardapio
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".site-search");
+  const input = document.querySelector("#busca");
+  const resultadosDiv = document.querySelector("#resultados");
+  const itens = document.querySelectorAll(".menu-item");
+
+  // Evita recarregar a página ao enviar o formulário
+  form.addEventListener("submit", (e) => e.preventDefault());
+
+  // Função para exibir os resultados
+  const mostrarResultados = () => {
+    const termo = input.value.trim().toLowerCase();
+    resultadosDiv.innerHTML = ""; // limpa resultados anteriores
+
+    if (termo === "") {
+      resultadosDiv.innerHTML = "<p>Digite algo para buscar 🍕</p>";
+      return;
+    }
+
+    // Filtra os itens do cardápio
+    const encontrados = Array.from(itens).filter(item => {
+      const nome = item.querySelector(".item-nome").textContent.toLowerCase();
+      const ingredientes = item.querySelector(".item-ingredientes")?.textContent.toLowerCase() || "";
+      return nome.includes(termo) || ingredientes.includes(termo);
+    });
+
+    if (encontrados.length === 0) {
+      resultadosDiv.innerHTML = "<p>Nenhum item encontrado 😢</p>";
+      return;
+    }
+
+    // Mostra os resultados encontrados
+    encontrados.forEach(item => {
+      const nome = item.querySelector(".item-nome").textContent;
+      const preco = item.querySelector(".item-preco").textContent;
+      const ingredientes = item.querySelector(".item-ingredientes")?.textContent || "";
+
+      const card = document.createElement("div");
+      card.classList.add("resultado-item");
+      card.innerHTML = `
+        <h3>${nome}</h3>
+        <p>${preco}</p>
+        <p>${ingredientes}</p>
+      `;
+      resultadosDiv.appendChild(card);
+    });
+  };
+
+  // 🔍 Evento de busca em tempo real
+  input.addEventListener("input", mostrarResultados);
+});

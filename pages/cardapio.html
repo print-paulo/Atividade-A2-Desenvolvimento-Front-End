@@ -49,20 +49,23 @@
                 </nav>
             </section>
 
-            <section id="search" class="busca-container">
+           
+            <canvas id="meuCanvas" width = "600px" height="200px"></canvas>
+
+
+             <section id="search" class="busca-container">
                 <form class="site-search" role="search" aria-label="Buscar no cardápio">
                     <label for="busca">Buscar sabores, bebidas, lanches:</label>
-                    <input
-                        id="busca"
-                        name="busca"
-                        type="search"
-                        placeholder="Ex.: Portuguesa, Refrigerante..."
-                        autocomplete="off"
-                    >
+                    <input id="busca" name="busca" type="search" placeholder="Ex.: Portuguesa, Refrigerante..."
+                        autocomplete="off">
+
+                   
                     <button type="submit">Buscar</button>
                 </form>
+
+                <!-- 🔍 Resultados aparecerão aqui -->
+                <div id="resultados"></div>
             </section>
-            <canvas id="meuCanvas" width = "600px" height="200px"></canvas>
 
             <!-- Pizzas Salgadas -->
             <section id="pizzas-salgadas" class="categoria-menu">
