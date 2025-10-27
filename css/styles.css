@@ -883,3 +883,111 @@ footer a:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* ========================================
+   8. CANVA 1
+======================================== */
+/* ------------------------------------------------ */
+/* ESTILOS ESPECÍFICOS PARA A PÁGINA MONTE SUA PIZZA */
+/* ------------------------------------------------ */
+
+/* Fundo da página específica (Aplicado ao container principal) */
+.page-monte-pizza {
+    /* Usando a variável do seu root */
+    background-color: var(--cor-fundo-suave); 
+    padding: 40px 20px; 
+}
+
+.page-monte-pizza h1 {
+    color: var(--cor-primaria);
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.page-monte-pizza p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Layout Principal (Canvas e Controles) */
+.page-monte-pizza .pizza-builder {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap; 
+}
+
+/* Estilo do Canvas Container */
+.page-monte-pizza .canvas-area {
+    background-color: var(--cor-fundo-claro);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: var(--sombra-densa);
+    order: 2; /* Fica à direita no desktop */
+}
+
+/* Estilo dos Controles */
+.page-monte-pizza .controles {
+    background-color: var(--cor-fundo-claro);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--sombra-leve);
+    max-width: 350px;
+    order: 1; /* Fica à esquerda no desktop */
+}
+
+.page-monte-pizza .controles h2 {
+    color: var(--cor-texto-principal);
+    margin-top: 0;
+    border-bottom: 2px solid var(--cor-secundaria);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilos de Botões */
+.page-monte-pizza .botoes-ingredientes button,
+.page-monte-pizza .btn-reset,
+.page-monte-pizza .btn-finalizar {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transicao-padrao);
+    box-shadow: var(--sombra-leve);
+}
+
+.page-monte-pizza .botoes-ingredientes button {
+    background-color: var(--cor-texto-principal); /* Verde escuro */
+    color: white;
+}
+.page-monte-pizza .botoes-ingredientes button:hover {
+    background-color: #4a633a;
+}
+
+.page-monte-pizza .btn-reset {
+    background-color: var(--cor-texto-secundario);
+    color: white;
+}
+.page-monte-pizza .btn-reset:hover {
+    background-color: #8c9a94;
+}
+
+.page-monte-pizza .btn-finalizar {
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo-claro);
+    font-size: 1.1em;
+    margin-top: 15px;
+}
+.page-monte-pizza .btn-finalizar:hover {
+    background-color: #a32d1e;
+}
+
+.page-monte-pizza hr {
+    border: 0;
+    border-top: 1px solid var(--cor-secundaria);
+    margin: 20px 0;
+}

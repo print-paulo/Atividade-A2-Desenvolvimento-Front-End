@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ <head>
+    <script defer src="../js/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Monte sua pizza personalizada na DevPizza usando nosso construtor interativo!">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Monte Sua Pizza | DevPizza</title>
+    
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <script src="../js/script-montar-pizza.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+</head>
+<body>
+
+
+
+    <main class="container page-monte-pizza">
+        <h1>Crie sua Pizza Perfeita!</h1>
+        <p>Selecione os ingredientes para personalizar sua pizza.</p>
+        
+        <div class="pizza-builder">
+            
+            <div class="controles">
+                <h2>O que deseja adicionar?</h2>
+                <div class="botoes-ingredientes">
+                    <button id="addCheeseBtn" data-ingrediente="queijo">Adicionar Queijo</button>
+                    <button id="addPepperoniBtn" data-ingrediente="pepperoni">Adicionar Pepperoni</button>
+                    <button id="addMushroomBtn" data-ingrediente="cogumelos">Adicionar Cogumelos</button>
+                    <button id="addOliveBtn" data-ingrediente="azeitonas">Adicionar Azeitonas</button>
+                </div>
+                
+                <hr>
+                
+                <button id="resetBtn" class="btn-reset">Recomeçar</button>
+                <button id="addToCartBtn" class="btn-finalizar">Adicionar à Cesta</button>
+            </div>
+
+            <div class="canvas-area">
+                <canvas id="pizzaCanvas" width="450" height="450">
+                    Seu navegador não suporta o elemento Canvas.
+                </canvas>
+            </div>
+            
+        </div>
+    </main>
+
+
+
+</body>
+</html>
