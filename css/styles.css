@@ -42,7 +42,7 @@ body {
 
 main {
   flex: 1;
-  padding-top: 91px;
+  padding-top: 90px;
 }
 
 img {
@@ -58,18 +58,19 @@ a {
   transition: color var(--transicao-padrao);
 }
 
-a:hover {
-  color: #b29047;
-}
-
 /* ========================================
    3. HEADER E NAVEGAÇÃO
 ======================================== */
+.main-header-canvas {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
 .main-header {
   background-color: var(--cor-primaria);
   padding: 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
@@ -79,9 +80,15 @@ a:hover {
   box-shadow: var(--sombra-leve);
 }
 
+.main-header nav {
+  margin-left: auto;
+}
+
 .main-header h1 {
   color: var(--cor-secundaria);
-  margin: 0;
+  margin-right: 15px;
+  margin-bottom: 0px;
+  margin-top: 0px;
   font-size: 1.8em;
 }
 
@@ -236,11 +243,13 @@ body input[type="search"] {
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  background-color: var(--cor-fundo-suave);
+  border-radius: 10px;
 }
 
-.hero {
-  background-color: var(--cor-fundo-suave);
-}
+
 
 .hero h2,
 .destaque h2,
