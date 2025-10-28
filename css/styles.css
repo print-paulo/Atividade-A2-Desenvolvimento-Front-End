@@ -567,6 +567,26 @@ body input[type="search"] {
   margin-bottom: 10px;
 }
 
+#crie-sua-pizza {
+  color: var(--cor-secundaria);
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: var(--cor-primaria);
+  text-align: center;
+  transition: var(--transicao-padrao);
+}
+
+#crie-sua-pizza:hover {
+  background-color: #b29047;
+  transform: translateY(-2px);
+  box-shadow: var(--sombra-leve);
+}
+
+.crie-sua-pizza{
+  padding: 0px 0px 50px 0px;
+  text-align: center;
+}
+
 .item-preco {
   color: #b29047;
   font-size: 1.1em;
@@ -895,7 +915,7 @@ footer a:hover {
 .page-monte-pizza {
     /* Usando a variável do seu root */
     background-color: var(--cor-fundo-suave); 
-    padding: 40px 20px; 
+    padding: 90px 20px; 
 }
 
 .page-monte-pizza h1 {
