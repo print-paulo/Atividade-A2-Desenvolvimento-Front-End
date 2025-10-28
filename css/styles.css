@@ -42,7 +42,7 @@ body {
 
 main {
   flex: 1;
-  padding-top: 91px;
+  padding-top: 90px;
 }
 
 img {
@@ -56,10 +56,6 @@ a {
   text-decoration: none;
   font-weight: bold;
   transition: color var(--transicao-padrao);
-}
-
-a:hover {
-  color: #b29047;
 }
 
 /* ========================================
@@ -247,11 +243,13 @@ body input[type="search"] {
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  background-color: var(--cor-fundo-suave);
+  border-radius: 10px;
 }
 
-.hero {
-  background-color: var(--cor-fundo-suave);
-}
+
 
 .hero h2,
 .destaque h2,
