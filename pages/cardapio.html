@@ -6,8 +6,8 @@
     <meta name="description" content="Cardápio completo da DevPizza - Pizzas salgadas, pizzas doces, esfihas, lanches e bebidas">
     <meta name="keywords" content="cardápio pizza, menu pizzaria, pizzas salgadas, pizzas doces, esfihas, delivery">
     <title>Cardápio - DevPizza</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <script src="../js/script.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -50,10 +50,11 @@
                 </nav>
             </section>
             <br>
+            <!-- Ícone da cesta fixo -->
+            <a href="/pages/cesta-compras.html" class="cesta-fixa" title="Ver Cesta">🛒</a>
             <nav class="crie-sua-pizza" aria-label="Crie sua pizza">
           
             <a href="montar-pizza.html" id="crie-sua-pizza">Crie sua pizza</a>
-              
 
             </nav>
 
@@ -89,123 +90,109 @@
                     <li class="menu-item">
                         <h3 class="item-nome">Calabresa</h3>
                         <p class="item-preco">R$ 30,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> queijo mussarela, calabresa, cebola, orégano.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> queijo mussarela, calabresa, cebola, orégano.</p>
+                        <button onclick="adicionarAoCarrinho('Pizza Calabresa', 30.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Frango com Catupiry</h3>
                         <p class="item-preco">R$ 35,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> queijo mussarela, frango desfiado, catupiry, orégano.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> queijo mussarela, frango desfiado, catupiry, orégano.</p>
+                        <button onclick="adicionarAoCarrinho('Pizza Frango com Catupiry', 35.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Portuguesa</h3>
                         <p class="item-preco">R$ 40,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> mussarela, presunto, ovo cozido, cebola, azeitona, orégano.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> mussarela, presunto, ovo cozido, cebola, azeitona, orégano.</p>
+                        <button onclick="adicionarAoCarrinho('Pizza Portuguesa', 40.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Margherita</h3>
                         <p class="item-preco">R$ 25,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> mussarela, tomate fatiado, manjericão.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> mussarela, tomate fatiado, manjericão.</p>
+                        <button onclick="adicionarAoCarrinho('Pizza Margherita', 25.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Bacon</h3>
                         <p class="item-preco">R$ 50,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> bacon, mussarela, molho de tomate, orégano, catupiry.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> bacon, mussarela, molho de tomate, orégano, catupiry.</p>
+                        <button onclick="adicionarAoCarrinho('Pizza Bacon', 50.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Palmito</h3>
                         <p class="item-preco">R$ 48,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> palmito, mussarela, molho de tomate, orégano.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> palmito, mussarela, molho de tomate, orégano.</p>
+                        <button onclick="adicionarAoCarrinho('Pizza Palmito', 48.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Carne Seca com Catupiry</h3>
                         <p class="item-preco">R$ 55,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> carne seca, catupiry, mussarela, cebola roxa.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> carne seca, catupiry, mussarela, cebola roxa.</p>
+                        <button onclick="adicionarAoCarrinho('Pizza Carne Seca com Catupiry', 55.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Camarão</h3>
                         <p class="item-preco">R$ 65,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> camarão, catupiry, mussarela, molho de tomate.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> camarão, catupiry, mussarela, molho de tomate.</p>
+                        <button onclick="adicionarAoCarrinho('Pizza Camarão', 65.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Baiana</h3>
                         <p class="item-preco">R$ 58,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> calabresa, pimenta dedo-de-moça, cebola, pimentão, ovos cozidos, mussarela, molho de tomate.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> calabresa, pimenta dedo-de-moça, cebola, pimentão, ovos cozidos, mussarela, molho de tomate.</p>
+                        <button onclick="adicionarAoCarrinho('Pizza Baiana', 58.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Mineira</h3>
                         <p class="item-preco">R$ 55,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> linguiça calabresa, couve refogada, mussarela, bacon.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> linguiça calabresa, couve refogada, mussarela, bacon.</p>
+                        <button onclick="adicionarAoCarrinho('Pizza Mineira', 55.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Pepperoni</h3>
                         <p class="item-preco">R$ 55,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> pepperoni, mussarela, molho de tomate, orégano.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> pepperoni, mussarela, molho de tomate, orégano.</p>
+                        <button onclick="adicionarAoCarrinho('Pizza Pepperoni', 55.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Romana</h3>
                         <p class="item-preco">R$ 55,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> anchovas, mussarela, azeitona preta, molho de tomate.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> anchovas, mussarela, azeitona preta, molho de tomate.</p>
+                        <button onclick="adicionarAoCarrinho('Pizza Romana', 55.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Corinthiana</h3>
                         <p class="item-preco">R$ 55,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> frango desfiado, cebola, azeitona preta, mussarela, pimenta.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> frango desfiado, cebola, azeitona preta, mussarela, pimenta.</p>
+                        <button onclick="adicionarAoCarrinho('Pizza Corinthiana', 55.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Palmeirense</h3>
                         <p class="item-preco">R$ 58,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> lombo de porco, brócolis, palmito, orégano, mussarela, alho frito.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> lombo de porco, brócolis, palmito, orégano, mussarela, alho frito.</p>
+                        <button onclick="adicionarAoCarrinho('Pizza Palmeirense', 58.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">São Paulina</h3>
                         <p class="item-preco">R$ 60,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> presunto, calabresa, mussarela, rúcula, pimenta, alho frito.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> presunto, calabresa, mussarela, rúcula, pimenta, alho frito.</p>
+                        <button onclick="adicionarAoCarrinho('Pizza São Paulina', 60.00)">Adicionar à cesta</button>
                     </li>
                 </ul>
+
             </section>
 
             <!-- Pizzas Doces -->
@@ -222,123 +209,109 @@
                     <li class="menu-item">
                         <h3 class="item-nome">Chocolate ao Leite</h3>
                         <p class="item-preco">R$ 30,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> chocolate ao leite, mussarela, granulado.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> chocolate ao leite, mussarela, granulado.</p>
+                        <button onclick="adicionarAoCarrinho('Chocolate ao Leite', 30.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Prestígio</h3>
                         <p class="item-preco">R$ 35,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> chocolate ao leite, coco ralado, mussarela.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> chocolate ao leite, coco ralado, mussarela.</p>
+                        <button onclick="adicionarAoCarrinho('Prestígio', 35.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Romeu e Julieta</h3>
                         <p class="item-preco">R$ 32,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> goiabada, queijo mussarela.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> goiabada, queijo mussarela.</p>
+                        <button onclick="adicionarAoCarrinho('Romeu e Julieta', 32.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Chocolate Branco com Morango</h3>
                         <p class="item-preco">R$ 38,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> chocolate branco, morango, mussarela.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> chocolate branco, morango, mussarela.</p>
+                        <button onclick="adicionarAoCarrinho('Chocolate Branco com Morango', 38.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Banana com Canela</h3>
                         <p class="item-preco">R$ 28,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> banana fatiada, açúcar, canela, mussarela.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> banana fatiada, açúcar, canela, mussarela.</p>
+                        <button onclick="adicionarAoCarrinho('Banana com Canela', 28.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Doce de Leite com Coco</h3>
                         <p class="item-preco">R$ 36,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> doce de leite, coco ralado, mussarela.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> doce de leite, coco ralado, mussarela.</p>
+                        <button onclick="adicionarAoCarrinho('Doce de Leite com Coco', 36.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Chocolate com Avelã</h3>
                         <p class="item-preco">R$ 40,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> chocolate ao leite, creme de avelã, mussarela.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> chocolate ao leite, creme de avelã, mussarela.</p>
+                        <button onclick="adicionarAoCarrinho('Chocolate com Avelã', 40.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Morango com Nutella</h3>
                         <p class="item-preco">R$ 42,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> morango, Nutella, mussarela.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> morango, Nutella, mussarela.</p>
+                        <button onclick="adicionarAoCarrinho('Morango com Nutella', 42.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Maçã com Canela</h3>
                         <p class="item-preco">R$ 30,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> maçã fatiada, açúcar, canela, mussarela.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> maçã fatiada, açúcar, canela, mussarela.</p>
+                        <button onclick="adicionarAoCarrinho('Maçã com Canela', 30.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Chocolate Meio Amargo</h3>
                         <p class="item-preco">R$ 35,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> chocolate meio amargo, mussarela, raspas de chocolate.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> chocolate meio amargo, mussarela, raspas de chocolate.</p>
+                        <button onclick="adicionarAoCarrinho('Chocolate Meio Amargo', 35.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Doce de Leite com Banana</h3>
                         <p class="item-preco">R$ 33,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> doce de leite, banana fatiada, mussarela.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> doce de leite, banana fatiada, mussarela.</p>
+                        <button onclick="adicionarAoCarrinho('Doce de Leite com Banana', 33.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Brigadeiro</h3>
                         <p class="item-preco">R$ 28,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> brigadeiro, granulado, mussarela.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> brigadeiro, granulado, mussarela.</p>
+                        <button onclick="adicionarAoCarrinho('Brigadeiro', 28.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Chocolate com Morango e Chantilly</h3>
                         <p class="item-preco">R$ 45,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> chocolate ao leite, morango, chantilly, mussarela.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> chocolate ao leite, morango, chantilly, mussarela.</p>
+                        <button onclick="adicionarAoCarrinho('Chocolate com Morango e Chantilly', 45.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Limão Siciliano</h3>
                         <p class="item-preco">R$ 38,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> creme de limão, raspas de limão, mussarela.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> creme de limão, raspas de limão, mussarela.</p>
+                        <button onclick="adicionarAoCarrinho('Limão Siciliano', 38.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Oreo</h3>
                         <p class="item-preco">R$ 40,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> creme de chocolate, biscoito Oreo triturado, mussarela.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> creme de chocolate, biscoito Oreo triturado, mussarela.</p>
+                        <button onclick="adicionarAoCarrinho('Oreo', 40.00)">Adicionar à cesta</button>
                     </li>
                 </ul>
+
             </section>
 
             <!-- Esfihas -->
@@ -355,99 +328,88 @@
                     <li class="menu-item">
                         <h3 class="item-nome">Esfiha de Carne</h3>
                         <p class="item-preco">R$ 6,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> carne moída temperada, cebola, tomate, especiarias.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> carne moída temperada, cebola, tomate, especiarias.</p>
+                        <button onclick="adicionarAoCarrinho('Esfiha de Carne', 6.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Esfiha de Queijo</h3>
                         <p class="item-preco">R$ 6,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> queijo mussarela derretido.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> queijo mussarela derretido.</p>
+                        <button onclick="adicionarAoCarrinho('Esfiha de Queijo', 6.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Esfiha de Frango com Catupiry</h3>
                         <p class="item-preco">R$ 7,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> frango desfiado, catupiry, temperos.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> frango desfiado, catupiry, temperos.</p>
+                        <button onclick="adicionarAoCarrinho('Esfiha de Frango com Catupiry', 7.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Esfiha de Calabresa</h3>
                         <p class="item-preco">R$ 6,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> calabresa moída, cebola, mussarela.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> calabresa moída, cebola, mussarela.</p>
+                        <button onclick="adicionarAoCarrinho('Esfiha de Calabresa', 6.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Esfiha de Escarola com Queijo</h3>
                         <p class="item-preco">R$ 7,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> escarola refogada, queijo mussarela.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> escarola refogada, queijo mussarela.</p>
+                        <button onclick="adicionarAoCarrinho('Esfiha de Escarola com Queijo', 7.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Esfiha de Atum</h3>
                         <p class="item-preco">R$ 7,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> atum, cebola, temperos.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> atum, cebola, temperos.</p>
+                        <button onclick="adicionarAoCarrinho('Esfiha de Atum', 7.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Esfiha de Quatro Queijos</h3>
                         <p class="item-preco">R$ 8,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> mussarela, parmesão, provolone, catupiry.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> mussarela, parmesão, provolone, catupiry.</p>
+                        <button onclick="adicionarAoCarrinho('Esfiha de Quatro Queijos', 8.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Esfiha de Pernil</h3>
                         <p class="item-preco">R$ 7,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> pernil desfiado, cebola, molho especial.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> pernil desfiado, cebola, molho especial.</p>
+                        <button onclick="adicionarAoCarrinho('Esfiha de Pernil', 7.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Esfiha de Milho com Catupiry</h3>
                         <p class="item-preco">R$ 7,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> milho, catupiry.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> milho, catupiry.</p>
+                        <button onclick="adicionarAoCarrinho('Esfiha de Milho com Catupiry', 7.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Esfiha de Presunto e Queijo</h3>
                         <p class="item-preco">R$ 6,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> presunto, queijo mussarela.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> presunto, queijo mussarela.</p>
+                        <button onclick="adicionarAoCarrinho('Esfiha de Presunto e Queijo', 6.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Esfiha de Frango com Milho</h3>
                         <p class="item-preco">R$ 8,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> frango, milho.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> frango, milho.</p>
+                        <button onclick="adicionarAoCarrinho('Esfiha de Frango com Milho', 8.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Esfiha de Carne Seca com Requeijão</h3>
                         <p class="item-preco">R$ 8,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> carne seca desfiada, requeijão cremoso.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> carne seca desfiada, requeijão cremoso.</p>
+                        <button onclick="adicionarAoCarrinho('Esfiha de Carne Seca com Requeijão', 8.00)">Adicionar à cesta</button>
                     </li>
                 </ul>
+
             </section>
 
             <!-- Lanches -->
@@ -464,43 +426,39 @@
                     <li class="menu-item">
                         <h3 class="item-nome">Kibe</h3>
                         <p class="item-preco">R$ 8,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> trigo para kibe, carne moída, hortelã, cebola, temperos.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> trigo para kibe, carne moída, hortelã, cebola, temperos.</p>
+                        <button onclick="adicionarAoCarrinho('Kibe', 8.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Beirute</h3>
                         <p class="item-preco">R$ 25,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> pão sírio, filé de frango ou rosbife, queijo, presunto, alface, tomate, maionese.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> pão sírio, filé de frango ou rosbife, queijo, presunto, alface, tomate, maionese.</p>
+                        <button onclick="adicionarAoCarrinho('Beirute', 25.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Fogazza</h3>
                         <p class="item-preco">R$ 10,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> massa frita, recheio de queijo ou carne, temperos.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> massa frita, recheio de queijo ou carne, temperos.</p>
+                        <button onclick="adicionarAoCarrinho('Fogazza', 10.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Coxinha</h3>
                         <p class="item-preco">R$ 7,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> massa de batata, frango desfiado, requeijão, temperos.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> massa de batata, frango desfiado, requeijão, temperos.</p>
+                        <button onclick="adicionarAoCarrinho('Coxinha', 7.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Empada</h3>
                         <p class="item-preco">R$ 6,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> massa amanteigada, recheio de frango, queijo ou palmito.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> massa amanteigada, recheio de frango, queijo ou palmito.</p>
+                        <button onclick="adicionarAoCarrinho('Empada', 6.00)">Adicionar à cesta</button>
                     </li>
                 </ul>
+
             </section>
 
             <!-- Bebidas -->
@@ -513,97 +471,103 @@
                     loading="lazy"
                 >
 
-                <ul class="menu-lista">
+               <ul class="menu-lista">
                     <li class="menu-item">
                         <h3 class="item-nome">Refrigerante Lata</h3>
                         <p class="item-preco">R$ 6,00</p>
+                        <button onclick="adicionarAoCarrinho('Refrigerante Lata', 6.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Refrigerante 2L</h3>
                         <p class="item-preco">R$ 15,00</p>
+                        <button onclick="adicionarAoCarrinho('Refrigerante 2L', 15.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Suco Natural de Laranja</h3>
                         <p class="item-preco">R$ 10,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> laranja fresca espremida.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> laranja fresca espremida.</p>
+                        <button onclick="adicionarAoCarrinho('Suco Natural de Laranja', 10.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Suco Natural de Abacaxi</h3>
                         <p class="item-preco">R$ 10,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> abacaxi fresco, água, açúcar (opcional).
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> abacaxi fresco, água, açúcar (opcional).</p>
+                        <button onclick="adicionarAoCarrinho('Suco Natural de Abacaxi', 10.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Suco Natural de Maracujá</h3>
                         <p class="item-preco">R$ 10,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> maracujá fresco, água, açúcar (opcional).
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> maracujá fresco, água, açúcar (opcional).</p>
+                        <button onclick="adicionarAoCarrinho('Suco Natural de Maracujá', 10.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Água Mineral</h3>
                         <p class="item-preco">R$ 4,00</p>
+                        <button onclick="adicionarAoCarrinho('Água Mineral', 4.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Água com Gás</h3>
                         <p class="item-preco">R$ 5,00</p>
+                        <button onclick="adicionarAoCarrinho('Água com Gás', 5.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Cerveja Lata</h3>
                         <p class="item-preco">R$ 8,00</p>
+                        <button onclick="adicionarAoCarrinho('Cerveja Lata', 8.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Cerveja Long Neck</h3>
                         <p class="item-preco">R$ 12,00</p>
+                        <button onclick="adicionarAoCarrinho('Cerveja Long Neck', 12.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Vinho Tinto Taça</h3>
                         <p class="item-preco">R$ 18,00</p>
+                        <button onclick="adicionarAoCarrinho('Vinho Tinto Taça', 18.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Vinho Branco Taça</h3>
                         <p class="item-preco">R$ 18,00</p>
+                        <button onclick="adicionarAoCarrinho('Vinho Branco Taça', 18.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Caipirinha</h3>
                         <p class="item-preco">R$ 20,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> cachaça, limão, açúcar, gelo.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> cachaça, limão, açúcar, gelo.</p>
+                        <button onclick="adicionarAoCarrinho('Caipirinha', 20.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Caipiroska</h3>
                         <p class="item-preco">R$ 22,00</p>
-                        <p class="item-ingredientes">
-                            <strong>Ingredientes:</strong> vodka, limão, açúcar, gelo.
-                        </p>
+                        <p class="item-ingredientes"><strong>Ingredientes:</strong> vodka, limão, açúcar, gelo.</p>
+                        <button onclick="adicionarAoCarrinho('Caipiroska', 22.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Chá Gelado</h3>
                         <p class="item-preco">R$ 8,00</p>
+                        <button onclick="adicionarAoCarrinho('Chá Gelado', 8.00)">Adicionar à cesta</button>
                     </li>
 
                     <li class="menu-item">
                         <h3 class="item-nome">Café Expresso</h3>
                         <p class="item-preco">R$ 6,00</p>
+                        <button onclick="adicionarAoCarrinho('Café Expresso', 6.00)">Adicionar à cesta</button>
                     </li>
                 </ul>
+
             </section>
         </section>
     </main>
