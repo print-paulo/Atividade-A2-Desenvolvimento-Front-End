@@ -703,54 +703,170 @@ body input[type="search"] {
 }
 
 /* --- Cesta de Compras --- */
-.carrinho-container {
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--cor-fundo-suave);
+  color: var(--cor-texto-principal);
+  margin: 0;
+  padding: 0;
+}
+main {
   max-width: 1000px;
   margin: 0 auto;
   padding: 40px 20px;
 }
 
-.carrinho-lista {
-  list-style: none;
+.cesta-fixa {
+    position: fixed;       /* Fixa no canto da tela */
+    top: 20px; 
+    margin-top: 80px;            /* Distância do topo */
+    right: 20px;           /* Distância da direita */
+    width: 50px;           /* Largura do círculo */
+    height: 50px;          /* Altura do círculo */
+    background-color: #ff6b6b;  /* Cor de fundo do círculo */
+    color: white;          /* Cor do ícone */
+    display: flex;         /* Para centralizar o ícone */
+    align-items: center;   /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    border-radius: 50%;    /* Deixa redondo */
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 24px;       /* Tamanho do ícone */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Sombra */
+    transition: transform 0.2s, background-color 0.2s; /* Animação hover */
+    z-index: 1000;         /* Fica acima de outros elementos */
 }
 
-.carrinho-item {
-  background-color: var(--cor-fundo-claro);
-  padding: 30px;
-  margin-bottom: 20px;
-  border-radius: 10px;
+/* Efeito quando passar o mouse */
+.cesta-fixa:hover {
+    background-color: #ff3b3b;
+    transform: scale(1.1);
+}
+
+.cesta-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.item-cesta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--cor-secundaria);
+  padding-bottom: 1rem;
+}
+
+.item-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.item-info img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
   box-shadow: var(--sombra-leve);
 }
 
-.carrinho-item h3 {
+.item-detalhes h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.item-detalhes p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+  color: var(--cor-texto-secundario);
+}
+
+.controle-quantidade {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.controle-quantidade button {
+  background-color: var(--cor-primaria);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transicao-padrao);
+}
+
+.controle-quantidade button:hover {
+  background-color: var(--cor-texto-principal);
+}
+
+.item-preco {
+  font-weight: bold;
   color: var(--cor-primaria);
-  font-size: 1.5em;
-  margin-bottom: 15px;
+  margin-right: 1rem;
 }
 
-.resumo-pedido {
-  background-color: var(--cor-fundo-suave);
-  padding: 30px;
-  border-radius: 10px;
-  max-width: 400px;
-  margin: 40px auto;
-  text-align: center;
+.btn-remover {
+  background: none;
+  border: none;
+  color: var(--cor-primaria);
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: var(--transicao-padrao);
 }
 
-.resumo-pedido .total {
-  font-size: 1.5em;
+.btn-remover:hover {
+  color: var(--cor-texto-principal);
+}
+
+.resumo-cesta {
+  margin-top: 2rem;
+  border-top: 2px solid var(--cor-secundaria);
+  padding-top: 1rem;
+}
+
+.resumo-linha {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+
+.total {
+  font-size: 1.3rem;
+  font-weight: bold;
   color: var(--cor-primaria);
   margin-top: 20px;
   padding-top: 20px;
   border-top: 2px solid var(--cor-primaria);
 }
 
-.form-entrega {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 40px;
-  background-color: var(--cor-fundo-claro);
+.btn-finalizar {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  background-color: var(--cor-primaria);
+  color: white;
+  border: none;
   border-radius: 10px;
-  box-shadow: var(--sombra-leve);
+  cursor: pointer;
+  font-size: 1.1rem;
+  box-shadow: var(--sombra-media);
+  transition: var(--transicao-padrao);
+}
+
+.btn-finalizar:hover {
+  background-color: var(--cor-texto-principal);
+}
+
+.vazia {
+  text-align: center;
+  color: var(--cor-texto-secundario);
+  font-style: italic;
+  margin-top: 2rem;
 }
 
 /* ========================================

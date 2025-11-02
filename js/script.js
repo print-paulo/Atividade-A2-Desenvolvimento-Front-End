@@ -1,3 +1,109 @@
+// Adiciona item ao carrinho
+function adicionarAoCarrinho(nome, preco) {
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    const itemExistente = carrinho.find(item => item.nome === nome);
+
+    if (itemExistente) {
+        itemExistente.quantidade += 1;
+    } else {
+        carrinho.push({ nome, preco, quantidade: 1 });
+    }
+
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    alert(`${nome} adicionado à cesta!`);
+}
+window.adicionarAoCarrinho = adicionarAoCarrinho;
+
+// Atualiza a lista do carrinho na página da cesta
+function atualizarCarrinho() {
+    const lista = document.getElementById('lista-carrinho');
+    const totalSpan = document.getElementById('total');
+    lista.innerHTML = '';
+    let total = 0;
+
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+    carrinho.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.style.marginBottom = "10px";
+
+        const nomeSpan = document.createElement('span');
+        nomeSpan.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
+        li.appendChild(nomeSpan);
+
+        const diminuirBtn = document.createElement('button');
+        diminuirBtn.textContent = '−';
+        diminuirBtn.style.margin = "0 5px";
+        diminuirBtn.onclick = () => {
+            if (item.quantidade > 1) {
+                item.quantidade -= 1;
+            } else {
+                carrinho.splice(index, 1);
+            }
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            atualizarCarrinho();
+        };
+        li.appendChild(diminuirBtn);
+
+        const quantidadeSpan = document.createElement('span');
+        quantidadeSpan.textContent = ` ${item.quantidade} `;
+        li.appendChild(quantidadeSpan);
+
+        const aumentarBtn = document.createElement('button');
+        aumentarBtn.textContent = '+';
+        aumentarBtn.style.margin = "0 5px";
+        aumentarBtn.onclick = () => {
+            item.quantidade += 1;
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            atualizarCarrinho();
+        };
+        li.appendChild(aumentarBtn);
+
+        const subtotalSpan = document.createElement('span');
+        subtotalSpan.textContent = ` Subtotal: R$ ${(item.preco * item.quantidade).toFixed(2)}`;
+        subtotalSpan.style.marginLeft = "10px";
+        li.appendChild(subtotalSpan);
+
+        lista.appendChild(li);
+        total += item.preco * item.quantidade;
+    });
+
+    totalSpan.textContent = total.toFixed(2);
+}
+
+// Limpar carrinho
+function limparCarrinho() {
+    if (confirm('Deseja realmente esvaziar a cesta?')) {
+        localStorage.removeItem('carrinho');
+        atualizarCarrinho();
+    }
+}
+
+// Finalizar compra
+function finalizarCompra() {
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    if (carrinho.length === 0) {
+        alert('Sua cesta está vazia!');
+        return;
+    }
+    alert('Compra finalizada! Total: R$ ' + carrinho.reduce((sum, item) => sum + item.preco * item.quantidade, 0).toFixed(2));
+    localStorage.removeItem('carrinho');
+    atualizarCarrinho();
+}
+
+// Inicializa a página da cesta se os elementos existirem
+if (document.getElementById('lista-carrinho')) {
+    document.getElementById('limpar').addEventListener('click', limparCarrinho);
+    document.getElementById('finalizar').addEventListener('click', finalizarCompra);
+    atualizarCarrinho();
+}
+
+
+// =========================
+// Fatia de pizza no header
+// =========================
+
+
 function desenharFatiaDePizza() {
     // 1. O Elemento (Certifique-se de que o ID 'iconeHeader' está correto no seu HTML)
     const canvas = document.getElementById('iconeHeader');
@@ -289,8 +395,9 @@ if (canvas) {
 window.onload = desenharFatiaDePizza;
 
 
-//busca no cardapio
-
+// =========================
+// Busca no cardápio
+// =========================
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".site-search");
   const input = document.querySelector("#busca");
@@ -322,23 +429,27 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Mostra os resultados encontrados
+    // Mostra os resultados encontrados com botão de adicionar
     encontrados.forEach(item => {
       const nome = item.querySelector(".item-nome").textContent;
-      const preco = item.querySelector(".item-preco").textContent;
+      const precoTexto = item.querySelector(".item-preco").textContent.replace(/[^\d,.,-]/g, "").replace(",", ".");
+      const preco = parseFloat(precoTexto);
       const ingredientes = item.querySelector(".item-ingredientes")?.textContent || "";
 
       const card = document.createElement("div");
       card.classList.add("resultado-item");
       card.innerHTML = `
         <h3>${nome}</h3>
-        <p>${preco}</p>
+        <p>R$ ${preco.toFixed(2)}</p>
         <p>${ingredientes}</p>
+        <button onclick="adicionarAoCarrinho('${nome}', ${preco})" class="btn-adicionar">
+          Adicionar à cesta
+        </button>
       `;
       resultadosDiv.appendChild(card);
     });
   };
 
-  // 🔍 Evento de busca em tempo real
+  // 🔍 Busca em tempo real
   input.addEventListener("input", mostrarResultados);
 });
