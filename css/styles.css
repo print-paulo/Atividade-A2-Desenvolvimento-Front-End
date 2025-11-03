@@ -248,8 +248,6 @@ body input[type="search"] {
   border-radius: 10px;
 }
 
-
-
 .hero h2,
 .destaque h2,
 .cta h2,
@@ -315,7 +313,7 @@ body input[type="search"] {
 }
 
 .estrelas label::before {
-  content: '\2605';
+  content: "\2605";
 }
 
 .estrelas label:hover,
@@ -344,7 +342,8 @@ body input[type="search"] {
   border-radius: 10px;
   box-shadow: var(--sombra-leve);
   background-color: var(--cor-fundo-claro);
-  transition: transform var(--transicao-padrao), box-shadow var(--transicao-padrao);
+  transition: transform var(--transicao-padrao),
+    box-shadow var(--transicao-padrao);
 }
 
 .sn-secao:hover {
@@ -473,7 +472,7 @@ body input[type="search"] {
 
 .cardapio-intro {
   text-align: center;
-  padding: 20px 20px ;
+  padding: 20px 20px;
 }
 
 .cardapio-banner {
@@ -561,7 +560,8 @@ body input[type="search"] {
   padding: 20px;
   border-radius: 8px;
   box-shadow: var(--sombra-leve);
-  transition: transform var(--transicao-padrao), box-shadow var(--transicao-padrao);
+  transition: transform var(--transicao-padrao),
+    box-shadow var(--transicao-padrao);
 }
 
 .menu-item:hover {
@@ -590,7 +590,7 @@ body input[type="search"] {
   box-shadow: var(--sombra-leve);
 }
 
-.crie-sua-pizza{
+.crie-sua-pizza {
   padding: 0px 0px 50px 0px;
   text-align: center;
 }
@@ -654,7 +654,8 @@ body input[type="search"] {
   border-radius: 8px;
   box-shadow: var(--sombra-media);
   border: 3px solid var(--cor-secundaria);
-  transition: transform var(--transicao-padrao), box-shadow var(--transicao-padrao);
+  transition: transform var(--transicao-padrao),
+    box-shadow var(--transicao-padrao);
 }
 
 .ambiente-galeria img:hover {
@@ -716,29 +717,29 @@ main {
 }
 
 .cesta-fixa {
-    position: fixed;       /* Fixa no canto da tela */
-    top: 20px; 
-    margin-top: 80px;            /* Distância do topo */
-    right: 20px;           /* Distância da direita */
-    width: 50px;           /* Largura do círculo */
-    height: 50px;          /* Altura do círculo */
-    background-color: #ff6b6b;  /* Cor de fundo do círculo */
-    color: white;          /* Cor do ícone */
-    display: flex;         /* Para centralizar o ícone */
-    align-items: center;   /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    border-radius: 50%;    /* Deixa redondo */
-    text-decoration: none; /* Remove sublinhado */
-    font-size: 24px;       /* Tamanho do ícone */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Sombra */
-    transition: transform 0.2s, background-color 0.2s; /* Animação hover */
-    z-index: 1000;         /* Fica acima de outros elementos */
+  position: fixed; /* Fixa no canto da tela */
+  top: 20px;
+  margin-top: 80px; /* Distância do topo */
+  right: 20px; /* Distância da direita */
+  width: 50px; /* Largura do círculo */
+  height: 50px; /* Altura do círculo */
+  background-color: #ff6b6b; /* Cor de fundo do círculo */
+  color: white; /* Cor do ícone */
+  display: flex; /* Para centralizar o ícone */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  border-radius: 50%; /* Deixa redondo */
+  text-decoration: none; /* Remove sublinhado */
+  font-size: 24px; /* Tamanho do ícone */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra */
+  transition: transform 0.2s, background-color 0.2s; /* Animação hover */
+  z-index: 1000; /* Fica acima de outros elementos */
 }
 
 /* Efeito quando passar o mouse */
 .cesta-fixa:hover {
-    background-color: #ff3b3b;
-    transform: scale(1.1);
+  background-color: #ff3b3b;
+  transform: scale(1.1);
 }
 
 .cesta-container {
@@ -1037,103 +1038,103 @@ footer a:hover {
 
 /* Fundo da página específica (Aplicado ao container principal) */
 .page-monte-pizza {
-    /* Usando a variável do seu root */
-    background-color: var(--cor-fundo-suave); 
-    padding: 90px 20px; 
+  /* Usando a variável do seu root */
+  background-color: var(--cor-fundo-suave);
+  padding: 90px 20px;
 }
 
 .page-monte-pizza h1 {
-    color: var(--cor-primaria);
-    text-align: center;
-    margin-bottom: 5px;
+  color: var(--cor-primaria);
+  text-align: center;
+  margin-bottom: 5px;
 }
 
 .page-monte-pizza p {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 /* Layout Principal (Canvas e Controles) */
 .page-monte-pizza .pizza-builder {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap; 
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
 }
 
 /* Estilo do Canvas Container */
 .page-monte-pizza .canvas-area {
-    background-color: var(--cor-fundo-claro);
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: var(--sombra-densa);
-    order: 2; /* Fica à direita no desktop */
+  background-color: var(--cor-fundo-claro);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: var(--sombra-densa);
+  order: 2; /* Fica à direita no desktop */
 }
 
 /* Estilo dos Controles */
 .page-monte-pizza .controles {
-    background-color: var(--cor-fundo-claro);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: var(--sombra-leve);
-    max-width: 350px;
-    order: 1; /* Fica à esquerda no desktop */
+  background-color: var(--cor-fundo-claro);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: var(--sombra-leve);
+  max-width: 350px;
+  order: 1; /* Fica à esquerda no desktop */
 }
 
 .page-monte-pizza .controles h2 {
-    color: var(--cor-texto-principal);
-    margin-top: 0;
-    border-bottom: 2px solid var(--cor-secundaria);
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+  color: var(--cor-texto-principal);
+  margin-top: 0;
+  border-bottom: 2px solid var(--cor-secundaria);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 /* Estilos de Botões */
 .page-monte-pizza .botoes-ingredientes button,
 .page-monte-pizza .btn-reset,
 .page-monte-pizza .btn-finalizar {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: var(--transicao-padrao);
-    box-shadow: var(--sombra-leve);
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: var(--transicao-padrao);
+  box-shadow: var(--sombra-leve);
 }
 
 .page-monte-pizza .botoes-ingredientes button {
-    background-color: var(--cor-texto-principal); /* Verde escuro */
-    color: white;
+  background-color: var(--cor-texto-principal); /* Verde escuro */
+  color: white;
 }
 .page-monte-pizza .botoes-ingredientes button:hover {
-    background-color: #4a633a;
+  background-color: #4a633a;
 }
 
 .page-monte-pizza .btn-reset {
-    background-color: var(--cor-texto-secundario);
-    color: white;
+  background-color: var(--cor-texto-secundario);
+  color: white;
 }
 .page-monte-pizza .btn-reset:hover {
-    background-color: #8c9a94;
+  background-color: #8c9a94;
 }
 
 .page-monte-pizza .btn-finalizar {
-    background-color: var(--cor-primaria);
-    color: var(--cor-fundo-claro);
-    font-size: 1.1em;
-    margin-top: 15px;
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo-claro);
+  font-size: 1.1em;
+  margin-top: 15px;
 }
 .page-monte-pizza .btn-finalizar:hover {
-    background-color: #a32d1e;
+  background-color: #a32d1e;
 }
 
 .page-monte-pizza hr {
-    border: 0;
-    border-top: 1px solid var(--cor-secundaria);
-    margin: 20px 0;
+  border: 0;
+  border-top: 1px solid var(--cor-secundaria);
+  margin: 20px 0;
 }
 
 /* ========================================
@@ -1152,7 +1153,7 @@ footer a:hover {
   border: 1px solid #e7b273;
   border-radius: 8px;
   padding: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .resultado-item h3 {
