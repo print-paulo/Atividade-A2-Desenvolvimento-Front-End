@@ -244,8 +244,8 @@ body input[type="search"] {
   margin: 0 auto;
   margin-bottom: 30px;
   margin-top: 30px;
-  background-color: var(--cor-fundo-suave);
-  border-radius: 10px;
+  background-color: var(--cor-fundo-claro);
+  border-radius: 25px;
 }
 
 .hero h2,
@@ -519,7 +519,24 @@ body input[type="search"] {
   text-align: center;
   padding: 30px 20px;
   background-color: var(--cor-fundo-claro);
+  border-radius: 25px;
 }
+
+.carrinho-container {
+  background-color: var(--cor-fundo-claro);
+  text-align: center;
+  box-shadow: var(--sombra-leve);
+  padding: 15px 20px;
+  border-radius: 25px;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+#lista-carrinho{
+  text-align: center;
+  list-style-type: none;
+}
+  
 
 .site-search {
   display: flex;
@@ -620,8 +637,10 @@ body input[type="search"] {
 }
 
 .ambiente-secao {
+  background-color: var(--cor-fundo-claro);
   text-align: center;
   padding: 20px;
+  border-radius: 25px;
 }
 
 .ambiente-secao__titulo {
