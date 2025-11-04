@@ -84,6 +84,13 @@ a {
   margin-left: auto;
 }
 
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
 .main-header h1 {
   color: var(--cor-secundaria);
   margin-right: 15px;
@@ -1026,6 +1033,26 @@ footer a:hover {
 
   .ambiente-galeria {
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 949px) {
+  /* 1. Oculta o menu de links (ele só aparecerá ao clicar no hambúrguer) */
+  .nav-links {
+    display: none;
+    flex-direction: column; /* Links um abaixo do outro no mobile */
+    /* ... outros estilos para o menu mobile (ex: posição absoluta/fixa) */
+  }
+
+  /* 2. Mostra o botão Hambúrguer */
+  .menu-toggle {
+    display: block;
+    /* ... outros estilos para o botão hambúrguer ... */
+  }
+
+  /* 3. Estilo para o menu aberto (ativado via JavaScript) */
+  .nav-links.active {
+    display: flex; /* ou block, dependendo do layout */
   }
 }
 
