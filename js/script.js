@@ -466,8 +466,15 @@ document.addEventListener("DOMContentLoaded", () => {
   input.addEventListener("input", mostrarResultados);
 });
 
-document
-  .querySelectorAll(".menu-toggle")
-  .addEventListener("click", function () {
-    document.querySelector(".nav-links").classList.toggle("active");
-  });
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mainNav = document.querySelector(".main-nav");
+
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener("click", function () {
+      // Alterna a classe 'active' no botão e no menu
+      menuToggle.classList.toggle("active");
+      mainNav.classList.toggle("active");
+    });
+  }
+});
