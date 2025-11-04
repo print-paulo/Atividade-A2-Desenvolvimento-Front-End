@@ -84,6 +84,35 @@ a {
   margin-left: auto;
 }
 
+.menu-toggle:hover {
+  background-color: transparent;
+  transform: none;
+  box-shadow: none;
+}
+
+.menu-toggle {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: none; /* Escondido por padrão em desktop */
+  flex-direction: column;
+  justify-content: space-around; /* Distribui as barrinhas */
+  align-items: center;
+  width: 30px;
+  height: 25px;
+  padding: 0;
+  margin-left: auto;
+}
+
+.menu-toggle .bar {
+  display: block;
+  width: 100%; /* 100% da largura do botão (30px) */
+  height: 3px;
+  background-color: var(--cor-secundaria); /* ou white */
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  margin: 0; /* Remove margens */
+}
 .main-header h1 {
   color: var(--cor-secundaria);
   margin-right: 15px;
@@ -1045,6 +1074,48 @@ footer a:hover {
 
   .ambiente-galeria {
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 949px) {
+  /* Esconde o nav desktop */
+  .main-header nav {
+    display: none;
+  }
+
+  /* MOSTRA o botão hambúrguer */
+  .menu-toggle {
+    display: flex; /* Agora sim ele aparece */
+  }
+
+  /* Quando o menu estiver ativo (você vai adicionar essa classe com JS) */
+  .main-nav.active {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-primaria);
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .main-nav.active ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Animação do X quando o menu está aberto */
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
   }
 }
 

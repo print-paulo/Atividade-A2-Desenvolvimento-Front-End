@@ -465,3 +465,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // 🔍 Busca em tempo real
   input.addEventListener("input", mostrarResultados);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mainNav = document.querySelector(".main-nav");
+
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener("click", function () {
+      // Alterna a classe 'active' no botão e no menu
+      menuToggle.classList.toggle("active");
+      mainNav.classList.toggle("active");
+    });
+  }
+});
