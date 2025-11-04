@@ -465,3 +465,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // 🔍 Busca em tempo real
   input.addEventListener("input", mostrarResultados);
 });
+
+document
+  .querySelectorAll(".menu-toggle")
+  .addEventListener("click", function () {
+    document.querySelector(".nav-links").classList.toggle("active");
+  });
